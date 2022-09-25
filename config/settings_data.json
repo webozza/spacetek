@@ -1876,7 +1876,8 @@
             "settings": {
               "video_slide_title": "How to Install Starlink roof Mount Kit",
               "video_url": "https:\/\/www.youtube.com\/watch?v=vgFd9y930_E",
-              "autoplay": false
+              "autoplay": false,
+              "image": "shopify:\/\/shop_images\/banner1920x930.jpg"
             }
           },
           "a1250bf2-ccb7-47fc-8ec8-fef446d8cda2": {
@@ -1884,7 +1885,8 @@
             "settings": {
               "video_slide_title": "How to Install Starlink roof Mount Kit",
               "video_url": "https:\/\/www.youtube.com\/watch?v=vgFd9y930_E",
-              "autoplay": false
+              "autoplay": false,
+              "image": "shopify:\/\/shop_images\/banner21920x930.jpg"
             }
           }
         },
