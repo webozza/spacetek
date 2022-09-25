@@ -1868,42 +1868,6 @@
           "sign2": "shopify:\/\/shop_images\/image2.png"
         }
       },
-      "166229310160150f76": {
-        "type": "index-video-module",
-        "blocks": {
-          "a88ae0f1-47e8-471d-997c-90dcdd48cc07": {
-            "type": "video",
-            "settings": {
-              "video_slide_title": "How to Install Starlink roof Mount Kit",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=vgFd9y930_E",
-              "autoplay": false
-            }
-          },
-          "a1250bf2-ccb7-47fc-8ec8-fef446d8cda2": {
-            "type": "video",
-            "settings": {
-              "video_slide_title": "How to Install Starlink roof Mount Kit",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=vgFd9y930_E",
-              "autoplay": false
-            }
-          }
-        },
-        "block_order": [
-          "a88ae0f1-47e8-471d-997c-90dcdd48cc07",
-          "a1250bf2-ccb7-47fc-8ec8-fef446d8cda2"
-        ],
-        "settings": {
-          "display": "",
-          "effect": "slide",
-          "autoplay": false,
-          "autoplay_speed": "7000",
-          "slideshow_width": 1920,
-          "slideshow_height": 1080,
-          "navigation": true,
-          "navigation_position": "index-slideshow-nav-middle",
-          "pagination": true
-        }
-      },
       "1662414261f429071a": {
         "type": "index-image-text",
         "settings": {
@@ -1963,7 +1927,6 @@
       "1550222669998",
       "1664006146c2ebecff",
       "1550463018808",
-      "166229310160150f76",
       "1662414261f429071a",
       "1550135933971",
       "16624200394fd79a8c"
