@@ -60,7 +60,21 @@ data-video-url="{{section.settings.video_url}}">
            "type": "image_picker",
            "id": "image",
            "label": "Image"
-         }
+         },
+         {
+          "id": "video_url",
+          "type": "video_url",
+          "label": "Video URL for Desktop",
+          "accept": ["youtube", "vimeo"],
+          "info": "Supports Youtube and Vimeo",
+          "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+        },
+        {
+          "id": "autoplay",
+          "type": "checkbox",
+          "label": "Autoplay",
+          "default": false
+          },          
        ]
      }
   ],
