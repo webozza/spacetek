@@ -1,0 +1,19 @@
+<!-- /templates/page.contact.liquid -->
+{%- comment -%}
+  The contents of the page.contact.liquid template can be found in /sections/contact-template.liquid
+{%- endcomment -%}
+
+<!-- /templates/page.liquid -->
+<div class="page-width contact-page">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header">
+        <h1 class="grid-container">Contact</h1>
+      </div>
+
+      <div class="rte">
+        {%- section 'contact-template' -%}
+      </div>
+    </div>
+  </div>
+</div>

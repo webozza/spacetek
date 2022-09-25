@@ -1,0 +1,32 @@
+<!-- /snippets/newsletter-popup.liquid -->
+<div class="reveal newsletter-popup" id="newsletter-popup" data-newsletter-popup-time='{"timeout": "{{ settings.news_time }}", "datetime": "{{ 'now' | date: "%m/%d/%Y %T" }}"}' data-newsletter-popup-view data-reveal data-animation-in="fade-in fast" data-animation-out="fade-out fast">
+  <div class="newsletter-popup-layout">
+    <div class="newsletter-popup-content">
+      <div class="newsletter-popup-banner">
+        {% if settings.mailing_bg %}
+        <img src="{{ settings.mailing_bg | img_url: '', crop: '' }}" class="width-100" alt="{{ settings.mailing_bg.alt }}" />
+        {% else %}
+        <img src="{{ 'icon-loader-clock.svg' | asset_url }}" data-src="{{ '273x337.png' | asset_url }}" class="width-100 lazyload" alt="{{ settings.mailing_bg.alt }}" />
+        {% endif %}
+      </div>
+      <div class="newsletter-popup-form">
+        <form action="{{ settings.mailchimp_form_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+          <h4 class="title">{{ settings.news_title }}</h4>
+          <p class="caption">{{ settings.news_sub }}</p>
+          <div class="group_input">
+            <input class="form-control" type="email" name="EMAIL" placeholder="{{ settings.news_input }}" />
+            <button class="_btn" type="submit">{{settings.news_actiontext}}</button>
+          </div>
+        </form>
+        <div class="newsletter-popup-hide">
+          <input type="checkbox" id="mc-popup-hide" class="popup-hide" value="0" data-newsletter-popup-hide>
+          <label for="mc-popup-hide">{{ settings.news_prevent }}</label>
+        </div>
+      </div>
+    </div>
+    <a class="button button-cancel button-cancel-custom  clear text-uppercase" data-close>
+      <!-- <em class="sli sli-close"></em> -->
+      {% include 'icon-cross' %}
+    </a>
+  </div>
+</div>

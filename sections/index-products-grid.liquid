@@ -1,0 +1,338 @@
+<div class="{{ section.settings.display }}">
+  <div class="grid-container">
+    <div class="index-products-grid-container box border-none">
+      {%- if section.settings.title != blank or section.settings.sub_title != blank -%}
+      <div class="box-divider grid-x">
+        {%- if section.settings.title != blank -%}
+        <h2 class="box-title width-100">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.sub_title != blank -%}
+        <p class="box-sub-title width-100">{{ section.settings.sub_title }}</p>
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+      <div class="box-content">        
+        <div class="products-grid grid-x grid-margin-x small-up-{{ section.settings.column_small }} medium-up-{{ section.settings.column_medium }} large-up-{{ section.settings.column_large }} xlarge-up-{{ section.settings.column_xlarge }} xxlarge-up-{{ section.settings.column_xxlarge }} xxxlarge-up-{{ section.settings.column_xxxlarge }}">
+          {% for product in collections[section.settings.collection].products limit:section.settings.limit %}
+          <div class="product-elemet cell">
+            <div class="product-grid">
+              {% include 'index-product-item' %} 
+            </div>
+          </div>
+          {% else %}
+          {% for i in (1..section.settings.limit) %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          <div class="swiper-slide cell">
+            <div class="product-grid">
+              <div class="product-item" data-product-item>
+                <div class="product-item-thumb">
+                  <a href="javascript:void(0);" class="display-block">
+                    {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                  </a>                          
+                </div>
+                <div class="product-item-caption">
+                  <div class="grid-x">
+                    <div class="cell auto">
+                      <h4 class="product-item-title">
+                        <a href="javascript:void(0);">{{ 'homepage.onboarding.product_title' | t }}</a>
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="product-item-price">
+                    <span class="product-item-price-sale">$99.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>      
+          {% endfor %}
+          {% endfor %}
+        </div>
+        {% if section.settings.viewall %}<div class="view-all"><a href="{{ collections[section.settings.collection].url }}">{{ section.settings.viewall }}</a></div>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Products Grid",
+  "class": "index-section index-products-grid",
+  "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display on",
+      "options": [
+        {
+          "value": "",
+          "label": "Desktop & Mobile"
+        },
+        {
+          "value": "show-for-large",
+          "label": "Desktop only"
+        },
+        {
+          "value": "hide-for-large",
+          "label": "Mobile only"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },	
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Collection title"
+    },
+	{
+      "type": "html",
+      "id": "sub_title",
+      "label": "Collection sub-title"
+    },
+    {
+      "type": "header",
+      "content": "Collection settings"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "limit",
+      "label": "Limit product show",
+      "default": "10"
+    },
+	{
+      "type": "text",
+      "id": "viewall",
+      "label": "View All Text",
+	  "default":"View All Products"
+    },
+    {
+      "type": "header",
+      "content": "Responsive columns"
+    },
+    {
+      "type": "select",
+      "id": "column_small",
+      "label": "Products per row",
+      "info": "For small screen (0px - 550px)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "column_medium",
+      "label": "Products per row",
+      "info": "For medium screen (551px - 800px)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ],
+      "default": "6"
+    },
+    {
+      "type": "select",
+      "id": "column_large",
+      "label": "Products per row",
+      "info": "For large screen (801px - 1260px)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "column_xlarge",
+      "label": "Products per row",
+      "info": "For xlarge screen (1261px - 1440px)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "select",
+      "id": "column_xxlarge",
+      "label": "Products per row",
+      "info": "For xxlarge screen (1441px - 1680px)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "select",
+      "id": "column_xxxlarge",
+      "label": "Products per row",
+      "info": "For xxxlarge screen (1681px - infinity)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        }
+      ],
+      "default": "4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Grid",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

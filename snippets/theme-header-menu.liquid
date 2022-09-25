@@ -1,0 +1,122 @@
+<!-- /snippets/theme-header-menu.liquid -->
+<div class="header-menu horizontal">
+  <ul class="header-menu-content dropdown menu horizontal" data-hover-delay="0" data-closing-time="0" data-dropdown-menu>
+    {%- for link in menu.links -%}
+      <li class="header-menu-root {% if link.active %}active{% endif %}">
+        <a href="{{ link.url }}" class="header-menu-root-link" data-handle="{{ link.handle }}">
+          {{ link.title }}
+          {% if settings.new_label == link.title %}
+          <span class="new-label" style="background-color:{{ settings.new_labelbkg }}">{{ settings.new_labeltext }}</span>
+          {% elsif settings.sale_label == link.title %}
+          <span class="sale-label" style="background-color:{{ settings.sale_labelbkg }}">{{ settings.sale_labeltext }}</span>
+          {% elsif settings.hot_label == link.title %}
+          <span class="hot-label" style="background-color:{{ settings.hot_labelbkg }}">{{ settings.hot_labeltext }}</span>
+          {% endif %}
+        </a>
+        {% comment %} Find a sub-menu setting for this menu {% endcomment %}
+        {%- assign link_title = link.title | downcase -%}
+        {%- assign block = blank -%}
+        {%- for item in blocks -%}
+          {%- assign target = item.settings.title | downcase -%}
+          {%- if item.type == 'sub_menu_setting' and target == link_title -%}
+            {%- assign block = item -%}
+            {% break %}
+          {%- endif -%}
+        {%- endfor -%}
+        {% if block != blank %}
+          {%- assign row = 1 -%}
+          {%- if block.settings.row != empty -%}
+            {%- assign row = block.settings.row -%}
+          {%- endif -%}
+          <ul class="header-menu-dropdown submenu is-dropdown-submenu" data-dropdown-panel-control>
+            <li class="header-menu-dropdown-container">
+              <div class="header-menu-dropdown-container__inner">
+                {% if link.links != blank %}
+                  <ul class="menu dropdown vertical dropdown-menu header-menu-submenu" data-hover-delay="0" data-closing-time="0" data-dropdown-menu>
+                    {%- for child in link.links -%}
+                      <li>
+                        <a href="{{ child.url }}">{{ child.title }}</a>
+                        {% if child.links != blank %}
+                          <ul class="menu vertical submenu is-dropdown-submenu">
+                            {%- assign child_links = child.links -%}
+                            {%- include 'menu-child' -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                {% comment %} Find a sub-menu content for this menu {% endcomment %}
+                {%- for block in blocks -%}
+                  {%- assign target = block.settings.title | downcase -%}
+                  {%- if block.type == 'sub_menu_content' and target == link_title -%}
+                    {%- if block.settings.link_list != empty and linklists[block.settings.link_list] != empty -%}
+                      <ul class="menu dropdown vertical dropdown-menu header-menu-submenu" data-hover-delay="0" data-closing-time="0" data-dropdown-menu>
+                        {%- assign child_links = linklists[block.settings.link_list].links -%}
+                        {%- include 'menu-child' -%}
+                      </ul>
+                    {%- endif -%}
+                    {%- if block.settings.link_list_col != empty and linklists[block.settings.link_list_col] != empty -%}
+                      {%- for child in linklists[block.settings.link_list_col].links -%}
+                        <div class="header-menu-multi-column header-menu-submenu">
+                          <a href="{{ child.url }}" class="header-menu-dropdown-menu-parent display-block">{{ child.title }}</a>
+                          {% if child.links != blank %}
+                            <ul class="menu vertical" data-hover-delay="0" data-closing-time="0" data-dropdown-menu>
+                              {%- assign child_links = child.links -%}
+                              {%- include 'menu-child' -%}
+                            </ul>
+                          {%- endif -%}
+                        </div>
+                      {%- endfor -%}
+                    {%- endif -%}
+                    {%- if block.settings.product != empty and all_products[block.settings.product] != empty -%}
+                      <div class="header-menu-dropdown-product">
+                        {%- assign product = all_products[block.settings.product] -%}
+                        <div class="product-grid">
+                          {%- include 'index-product-item' -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.article != empty and articles[block.settings.article] != empty -%}
+                      <div class="header-menu-dropdown-article">
+                        {% assign article = articles[block.settings.article] %}
+                        {%- include 'index-article-item' -%}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.html != empty and block.settings.html != blank -%}
+                      <div class="header-menu-dropdown-html">
+                        {{ block.settings.html }}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.image != empty and block.settings.image != blank -%}
+                      <div class="header-menu-dropdown-html">
+                        <a href="{{ block.settings.image_link }}">
+                          <img src="{{ 'icon-loader-clock.svg' | asset_url }}" data-src="{{ block.settings.image | img_url: '500x' }}" alt="block.settings.image.alt" class="lazyload" />
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+              {%- if block.settings.bg != empty and block.settings.bg != blank -%}
+                {%- assign bg_size = block.settings.bg_width | append: 'x' | append: block.settings.bg_height -%}
+                <img data-src="{{ block.settings.bg | img_url: bg_size }}" alt="{{ block.settings.bg.alt }}" class="header-menu-dropdown-background lazyload" />
+              }
+            {%- endif -%}
+          </li>
+        </ul>
+      {%- elsif link.links != blank -%}
+        <ul class="menu vertical submenu is-dropdown-submenu header-menu-submenu">
+          {%- assign child_links = link.links -%}
+          {%- include 'menu-child' -%}
+        </ul>
+      {%- elsif linklists[link.handle].links != empty and linklists[link.handle].links != blank -%}
+        <ul class="menu vertical submenu is-dropdown-submenu header-menu-submenu">
+          {%- assign child_links = linklists[link.handle].links -%}
+          {%- include 'menu-child' -%}
+        </ul>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
+</div>

@@ -1,0 +1,52 @@
+/* START - Style for sub-collections listing in Collection page */
+.collection-category-list li>a, .collection-category-list li.is-accordion-submenu-item>a{
+  display: block;
+  padding: 0.84375rem 1.25rem !important;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 1px solid #d0d0d0!important;
+  color: #969696;
+  border-top-style: none;
+  line-height: inherit;
+  margin: 0;
+  margin-top: -1px;
+}
+
+.collection-category-list .submenu-toggle {
+  height: 50px;
+  left: auto;
+  right: 0;
+  cursor: pointer;
+}
+
+.layout-sidebar-content .accordion-menu .nested.is-accordion-submenu{
+  margin-left: 1rem!important;
+}
+/* END - Style for sub-collections listing in Collection page */
+/*header style*/
+.desktop-header-logo img {
+    max-height: 4rem;
+}
+.desktop-header {
+    background: #000000;
+}
+.desktop-header a {
+    color: #fff;
+}
+/*banner text*/
+.index-slideshow-caption-title {
+    text-align: right !important;
+}
+.index-slideshow-caption-action.light a {
+    color: #027fdb;
+    padding: 12px 30px 10px;
+    border-radius: 33px;
+}
+/*single product*/
+.__pf_QjXtRDn9 .pf-138_, .__pf_QjXtRDn9 .pf-188_, .__pf_QjXtRDn9 .pf-213_, .__pf_QjXtRDn9 .pf-238_ {
+    display: block !important;
+}
+.__pf_QjXtRDn9 .pf-149_, .__pf_QjXtRDn9 .pf-199_, .__pf_QjXtRDn9 .pf-224_, .__pf_QjXtRDn9 .pf-249_ {
+    box-shadow: 0px 4px 0px #d59800;
+}

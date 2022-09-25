@@ -1,0 +1,34 @@
+<!-- Welcome section starts -->
+<section class="custom-image">
+	<div class="image">
+		{% if section.settings.img != '' %}          
+			<div class="img"><img src="{% if section.settings.img %}{{ section.settings.img | img_url: 'master' }}{% else %}{{ '335x135.png' | asset_url }}{% endif %}" alt="{{ section.settings.img.alt }}" /></div>          
+		{% endif %}
+		{% if section.settings.action != '' %}<div class="action"><a href="{{ section.settings.actionurl }}">{{ section.settings.action }}</a></div>{% endif %}
+	</div>
+</section>
+<!-- Welcome section ends -->
+{% schema %}
+{
+"name": "Image Section", // Section name
+"settings": [
+{
+  "type": "image_picker",
+  "id": "img",
+  "label": "Image"
+}
+],
+"presets": [
+{
+"name": "image section",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,99 @@
+<!-- Welcome section starts -->
+<section class="custom-content-image">
+<div class="grid-container">
+	<div class="one-half-column-left for-mov">
+		<div class="custom-cont-one">
+		{% if section.settings.section-heading != blank %}
+		<h2 class="section-heading">{{ section.settings.section-heading }}</h2>
+		{% endif %}
+        {% if section.settings.section-heading2 != blank %}
+		<h3 class="section-heading2">{{ section.settings.section-heading2 }}</h3>
+		{% endif %}
+        {% if section.settings.section-heading3 != blank %}
+		<h4 class="section-heading3">{{ section.settings.section-heading3 }}</h4>
+		{% endif %}
+        {% if section.settings.section-textarea != blank %}
+		<p class="section-textarea">{{ section.settings.section-textarea }}</p>
+		{% endif %}
+        {% if section.settings.section-heading4 != blank %}
+		<h4 class="section-heading4">{{ section.settings.section-heading4 }}</h4>
+		{% endif %}
+		<div class="custom-content-btn">
+			{% if section.settings.view-btn != blank %}
+			<button class="view-btn">
+			<a href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+			</button>
+			{% endif %}
+		</div>
+		</div>
+	</div>
+	<div class="one-half-column-right for-mov">
+		{% if section.settings.custom-img != '' %}          
+			<div class="custom-img"><img src="{% if section.settings.custom-img %}{{ section.settings.custom-img | img_url: 'master' }}{% else %}{{ '335x135.png' | asset_url }}{% endif %}" alt="{{ section.settings.custom-img.alt }}" /></div>          
+		{% endif %}
+		{% if section.settings.action != '' %}<div class="action"><a href="{{ section.settings.actionurl }}">{{ section.settings.action }}</a></div>{% endif %}
+	</div>
+	<br style="clear:both;" />
+</div>
+</section>
+<!-- Welcome section ends -->
+{% schema %}
+{
+"name": "Content Image Section", // Section name
+"settings": [
+{
+"id": "section-heading",
+"type": "text",
+"label": "Heading"
+},
+{
+"id": "section-heading2",
+"type": "text",
+"label": "Heading"
+},
+  {
+"id": "section-heading3",
+"type": "text",
+"label": "Heading"
+},
+  {
+"id": "section-textarea",
+"type": "html",
+"label": "textarea",
+    "info": "HTML is allowed"
+},
+{
+"id": "section-heading4",
+"type": "text",
+"label": "Heading"
+},
+{
+"id": "view-btn",
+"type": "text",
+"label": "Button name"
+},
+{
+"id": "view-btn-link",
+"type": "url",
+"label": "Button URL"
+},
+{
+  "type": "image_picker",
+  "id": "custom-img",
+  "label": "Image"
+}
+],
+"presets": [
+{
+"name": "Content Image Section",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

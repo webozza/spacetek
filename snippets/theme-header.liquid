@@ -1,0 +1,114 @@
+<!-- /snippets/theme-header.liquid -->
+<div class="header-wrap width-100" data-header-wrap> 
+  <div class="header hide-for-large" data-header data-header-base>
+    <div class="header-container">
+      {%- if template contains 'product' -%}
+        {%- include 'theme-header-mobile-product' -%}
+      {%- elsif template contains 'article' -%}
+        {%- include 'theme-header-mobile-article' -%}
+      {%- else -%}
+        {%- include 'theme-header-mobile' -%}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<div class="desktop-header show-for-large" {% if section.settings.header_sticky %}data-sticky='{"stickTo": "body", "stickyClass": "sticky", "responsive": {"800": {"disable": true}}}'{% endif %}>
+  <div class="grid-container">
+    <div class="flex-container grid-x grid-margin-x">      
+      <div class="desktop-header-logo cell small-12 medium-2 large-2 xlarge-2 xxlarge-2 xxxlarge-2">
+        {%- capture logo -%}
+        {%- if section.settings.logo -%}
+        {%- assign img_url = section.settings.logo | img_url: 'master' -%}
+        {%- assign logo_alt = section.settings.logo.alt | default: shop.name -%}
+        <a href="/" itemprop="url">
+          <img src="{{ img_url }}" alt="{{ logo_alt }}" />
+        </a>
+        {%- else -%}
+        <a href="/" itemprop="url">{{ shop.name }}</a>
+        {%- endif -%}
+        {%- endcapture -%}
+        {%- if template.name == 'index' -%}
+        <h1 itemscope itemtype="http://schema.org/Organization" class="margin-0">
+          {{ logo }}
+        </h1>
+        {%- else -%}
+        <div itemscope itemtype="http://schema.org/Organization">
+          {{ logo }}
+        </div>
+        {%- endif -%}
+      </div>
+      
+      <div class="desktop-header-navigation cell small-12 medium-8 large-8 xlarge-8 xxlarge-8 xxxlarge-8">
+        <div class="flex-container width-100 align-center">
+          {%- if section.settings.link_list != empty and linklists[section.settings.link_list] != empty -%}
+          {%- include 'theme-header-menu', config: section.settings, blocks: section.blocks, menu: linklists[section.settings.link_list] -%}
+          {%- endif -%}
+        </div>
+      </div>
+      
+      <div class="desktop-header-morelinks cell small-12 medium-2 large-2 xlarge-2 xxlarge-2 xxxlarge-2">
+        <div class="desktop-header-user-nav desktop-header-account dropdown menu">
+          <a class="icon-account display-block" data-toggle="account-box-desktop"><em class="sli sli-user"></em></a>              
+          <ul class="dropdown-pane no-bullet" id="account-box-desktop" data-dropdown data-hover="true" data-hover-pane="true">
+            {% if customer %}                    
+            <li class="logged-in">
+              <h2 class="account-logged-title text-center">{{ 'customer.account.welcome' | t }} {{ customer.first_name }} {{ customer.last_name }}</h2>
+              <ul class="account-logged-category no-bullet text-center margin-0">
+                <li><a href="/account" class="account-logged-link">{{ 'customer.orders.title' | t }}</a></li>
+                <li><a href="/account/addresses" class="account-logged-link">{{ 'customer.addresses.title' | t }}</a></li>                    
+                <li><a href="/account/logout" class="account-logged-link">{{ 'layout.customer.log_out' | t }}</a></li>
+              </ul>
+            </li>                    
+            {% else %}
+            <li class="not-login">
+              <div class="account-login">
+                {%- form 'customer_login', id:'customer_login_box' -%}
+                {%- if form.errors -%}
+                <div class="callout alert">
+                  {{ form.errors | default_errors }}
+                </div>
+                {%- endif -%}
+                <input type="email" name="customer[email]" class="account-field {% if form.errors contains 'email' %} input-error{% endif %}" placeholder="{{ 'customer.login.email' | t }}" autocapitalize="off" autocomplete="email">
+                {%- if form.password_needed -%}
+                <input type="password" value="" name="customer[password]" class="account-field {% if form.errors contains 'password' %}  input-error{% endif %}" placeholder="{{ 'customer.login.password' | t }}" autocomplete="current-password"/>
+                {%- endif -%}
+                {%- if form.password_needed -%}
+                <a href="/account/login#recover" class="account-login-recover">{{ 'customer.login.forgot_password' | t }}</a>
+                {%- endif -%}
+                <div class="sign-in_create-account">
+                    <button type="submit" class="button account-login-submit">{{ 'customer.login.sign_in' | t }}</button>
+                    <!-- <div>{{ 'layout.customer.create_account_title' | t }}</div> -->
+                    <a class="account-login-register" href="/account/register">{{ 'layout.customer.create_account' | t }}</a>
+                </div>
+                {%- endform -%}
+              </div>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="desktop-header-wishlist" data-wishlist-link-block>
+          <a href="/pages/wish-list" class="display-block">
+            <em class="sli sli-heart">
+              <span class="header-counter-pill" data-wishlist-count></span>
+            </em>
+          </a>
+        </div>
+        <div class="morelinks-cart">
+          <div class="desktop-header-user-nav desktop-header-mini-cart mini-cart">
+            <a class="display-block" data-toggle="mini-cart-desktop-info">
+              <em class="mini-cart-icon sli sli-handbag">
+                <span class="header-counter-pill mini-cart-total" data-cart-total>{{ cart.item_count }}</span>
+              </em>
+            </a>
+          </div>
+        </div>
+        <div class="morelinks-search">
+          <div class="desktop-header-user-nav desktop-header-search">
+            <a class="icon-search display-block" data-toggle="search-box-desktop"><em class="sli sli-magnifier"></em></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

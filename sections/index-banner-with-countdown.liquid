@@ -1,0 +1,88 @@
+<!-- /sections/index-banner-grid.liquid -->
+{%- assign image_size = section.settings.image_width | append: 'x' | append: section.settings.image_height -%}
+<div class="{{ section.settings.display }} bg-content" data-section-id="{{ section.id }}" data-section-type="banner-section">
+  <div class="grid-container">
+    <div class="bg-index-banner" style="background-image:url({% if section.settings.bkg %}{{ section.settings.bkg | img_url: 'master' }}{% else %}{% endif %})">
+      <div class="box border-none index-banner-grid-container">
+        <div class="box-content">
+          <div class="caption-area">
+            <div class="caption-area__inner">
+              {% if section.settings.title != '' %}<div class="heading">{{ section.settings.title }}</div>{% endif %}
+              {% if section.settings.titlesale != '' %}<div class="saletext">{{ section.settings.titlesale }}</div>{% endif %}
+              {% if section.settings.sign != '' %}          
+              <div class="sign"><img src="{% if section.settings.sign %}{{ section.settings.sign | img_url: 'master' }}{% else %}{% endif %}" alt="{{ section.settings.sign.alt }}" /></div>          
+              {% endif %}
+              {% if section.settings.action != '' %}<div class="action"><a href="{{ section.settings.actionurl }}">{{ section.settings.action }}</a></div>{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Banner with Countdown",
+  "class": "index-section index-banner-countdown",
+  "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display on",
+      "options": [
+        {
+          "value": "",
+          "label": "Desktop & Mobile"
+        },
+        {
+          "value": "show-for-large",
+          "label": "Desktop only"
+        },
+        {
+          "value": "hide-for-large",
+          "label": "Mobile only"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Heading Text",
+      "info": "HTML is allowed"
+    },
+    {
+      "type": "html",
+      "id": "titlesale",
+      "label": "Sale Text",
+      "info": "HTML is allowed"
+    },
+    {
+      "type": "image_picker",
+      "id": "sign",
+      "label": "Sign"
+    },
+	{
+      "type": "text",
+      "id": "action",
+      "label": "Action Text"
+    },
+	{
+      "type": "url",
+      "id": "actionurl",
+      "label": "Action Link"
+    },
+	{
+      "type": "image_picker",
+      "id": "bkg",
+      "label": "Image Background"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner with Countdown",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

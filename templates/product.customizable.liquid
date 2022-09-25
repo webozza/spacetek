@@ -1,0 +1,25 @@
+<div data-product-container>
+  {% case settings.layout %}
+  	{% when '1' %}
+  	  {%- section 'product-customizable-template' -%}
+      {%- section 'product-recommendations' -%}
+    {% when '2' %}
+  	  {%- section 'product-full-template' -%}
+    {% when '3' %}
+  	  {%- section 'product-sidebar-template' -%}
+    {% when '4' %}
+  	  {%- section 'product-imagegallery-template' -%}
+    {% when '5' %}
+  	  {%- section 'product-imageslider-template' -%}
+    {% when '6' %}
+  	  {%- section 'product-imagelisting-template' -%}
+    {% when '7' %}
+  	  {%- section 'product-imagemiddle-template' -%}
+    {% when '8' %}
+  	  {%- section 'product-groupitems-template' -%}
+    {% when '9' %}
+  	  {%- section 'product-rightthumbbubdle-template' -%}
+  {% endcase %}
+  
+  
+</div>
