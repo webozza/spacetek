@@ -1,103 +1,15 @@
-{% if section.settings.desktop_background_image != blank %}
-<div class="video-module-background">
-{% else %}
-<div class="video-module-defaultbg">
-{% endif %}
-{% if section.settings.desktop_overlay_image != blank %}
-<div class="video-module-overlay">
-{% else %}
-<div class="video-module-defaultoverlay">
-{% endif %}
-
-{% if section.settings.section-heading != blank %}
-		<h2 class="section-heading video-title">{{ section.settings.section-heading }}</h2>
-{% endif %}
-
-{% if section.settings.video_url != blank %}
-
-<div class="video-module-player" data-section-type="video">
-<div class="video-thumbnail">
-<div class="embed-video"
-data-source="{{ section.settings.video_url.type }}"
-data-video-url="{{section.settings.video_url}}">
-</div>
-{% if section.settings.video_thumbnail != blank %}
-
-<img id="video-thumb-play" src="{{ section.settings.video_thumbnail | img_url: 'master' }}" alt="video-thumbnail" />
-<div class="video-play-icon">
-</div>
-{% else %}
-<img id="video-thumb-play" src="https://fpoimg.com/700×400?text=thumbnail" alt="video-thumbnail" />
-{% endif %}
-</div>
-
-</div>
-
-{% endif %}
-</div>
-</div>
-
 {% schema %}
 {
-"name": "Slideshow",
-"max_blocks": 10,
-"class": "slideshow",
-{
-"blocks": [
-{
-"type": "image",
-"name": "Slide",
-"settings": [
-{
-"type": "image_picker",
-"id": "image",
-"label": "Image thumbnail",
-"info": "2048px width recommended"
-},
-{
-"type": "image_picker",
-"id": "image_mobile",
-"label": "Image thumbnail (mobile)",
-"info": "Desktop image will be used if not set"
-},
-{
-"type": "text",
-"id": "slide_heading",
-"label": "Heading",
-"default": "Welcome to Palo Alto"
-},
-{
-"type": "text",
-"id": "video_btn_text",
-"label": "Video button text",
-"default": "Watch the Video"
-},
-{
-"type": "video_url",
-"id": "video_btn_link",
-"label": "Video URL",
-"accept": [
-"youtube",
-"vimeo"
-],
-"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
-},
-]
-}
-],
-"presets": [
-{
-"name": "Slideshow",
-"category": "Image",
-"blocks": [
-{
-"type": "image"
-},
-{
-"type": "image"
-}
-]
-}
-]
+    "name" : "Featured Video Slider",
+    "block" : {
+        "settings" : [
+            {
+            "id": "custom_text_title",
+            "type": "text",
+            "label": "Text box heading",
+            "default": "Title"
+            }
+        ]
+    }
 }
 {% endschema %}
