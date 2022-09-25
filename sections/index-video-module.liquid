@@ -39,69 +39,295 @@ data-video-url="{{section.settings.video_url}}">
 
 {% schema %}
 {
-  "name": "Slideshow",
-  "tag": "section",
-  "class": "slideshow",
-  "limit": 1,
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Slideshow"
-    }
-  ],
-  "max_blocks": 5,
-  "blocks": [
-     {
-       "name": "Slide",
-       "type": "slide",
-       "settings": {
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-         "id": "video_url",
-         "type": "video_url",
-         "label": "Video URL for Desktop",
-         "accept": ["youtube", "vimeo"],
-         "info": "Supports Youtube and Vimeo",
-         "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-       },
-       {
-         "id": "autoplay",
-         "type": "checkbox",
-         "label": "Autoplay",
-         "default": false
-         },          
-       }
-     }
-  ],
-  "presets": [
-    {
-      "name": "Slideshow",
-      "settings": {
-        "title": "Slideshow"
-      },
-      "blocks": [
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        }
-      ]
-    }
-  ],
-  "locales": {
-    "en": {
-      "title": "Slideshow"
-    },
-    "fr": {
-      "title": "Diaporama"
-    }
-  },
-  "templates": ["article", "index", "page", "product"]
+"name": "Slideshow",
+"max_blocks": 10,
+"class": "slideshow",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_nav_dots",
+"label": "Show slide navigation dots",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_nav_arrows",
+"label": "Show slide navigation arrows",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "autoplay",
+"label": "Autoplay slideshow",
+"default": false
+},
+{
+"type": "select",
+"id": "transition",
+"label": "Transition style",
+"default": "slide",
+"options": [
+{ "label": "Slide", "value": "slide" },
+{ "label": "Fade", "value": "fade" },
+{ "label": "Zoom out", "value": "zoom-out" }
+]
+},
+{
+"type": "range",
+"id": "duration",
+"min": 2,
+"max": 5,
+"step": 1,
+"unit": "sec",
+"label": "Change slides every",
+"default": 4
+},
+{
+"type": "select",
+"id": "dots_position",
+"label": "Dots position",
+"default": "center",
+"options": [
+{ "label": "Left", "value": "left" },
+{ "label": "Center", "value": "center" },
+{ "label": "Right", "value": "right" }
+]
+},
+{
+"type": "select",
+"id": "slide_height",
+"label": "Slide height",
+"default": "one-hundred-height-hero",
+"options": [
+{
+"value": "one-hundred-height-hero",
+"label": "Full screen height"
+},
+{
+"value": "original-height",
+"label": "Image height"
+},
+{
+"value": "seven-fifty-height-hero",
+"label": "750px"
+},
+{
+"value": "sixty-fifty-height-hero",
+"label": "650px"
+},
+{
+"value": "five-fifty-height-hero ",
+"label": "550px"
+},
+{
+"value": "four-fifty-height-hero",
+"label": "450px"
+}
+]
+},
+{
+"type": "checkbox",
+"id": "show_arrow_down",
+"label": "Show down arrow",
+"default": false
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "2048px width recommended"
+},
+{
+"type": "image_picker",
+"id": "image_mobile",
+"label": "Image mobile",
+"info": "Desktop image will be used if not set"
+},
+{
+"type": "select",
+"id": "bg_position",
+"label": "Image position",
+"default": "bg-pos-center-center",
+"options": [
+{ "label": "Top", "value": "bg-pos-top-center" },
+{ "label": "Right", "value": "bg-pos-right-center" },
+{ "label": "Center", "value": "bg-pos-center-center" },
+{ "label": "Left", "value": "bg-pos-left-center" },
+{ "label": "Bottom", "value": "bg-pos-bottom-center" }
+]
+},
+{
+"type": "select",
+"id": "content_alignment",
+"label": "Slide content alignment",
+"default": "center",
+"options": [
+{ "value": "left", "label": "Left" }, 
+{ "value": "center", "label": "Center" },
+{ "value": "right", "label": "Right" },
+{ "value": "bottom-left", "label": "Bottom left" },
+{ "value": "bottom-right", "label": "Bottom right" }
+]
+},
+{
+"type": "select",
+"id": "content_width",
+"label": "Slide content width",
+"default": "three-quarters",
+"options": [
+{ "value": "one-third", "label": "35%" },
+{ "value": "one-half", "label": "50%" },
+{ "value": "three-quarters", "label": "75%" },
+{ "value": "full-width", "label": "100%" }
+]
+},
+{
+"type": "select",
+"id": "text_color",
+"label": "Color",
+"default": "text-light",
+"options": [
+{
+"value": "text-light",
+"label": "Light"
+},
+{
+"value": "text-dark",
+"label": "Dark"
+}
+]
+},
+{
+"type": "text",
+"id": "slide_heading",
+"label": "Heading",
+"default": "Welcome to Palo Alto"
+},
+{
+"type": "textarea",
+"id": "slide_subheading",
+"label": "Subheading",
+"default": "This subheading helps you provide some more detail to the title above."
+},
+{
+"type": "text",
+"id": "slide_btn_text",
+"label": "Button text",
+"default": "Welcome"
+},
+{
+"type": "url",
+"id": "slide_btn_link",
+"label": "Button URL"
+},
+{
+"type": "text",
+"id": "slide_btn_text_2",
+"label": "Second button text"
+},
+{
+"type": "url",
+"id": "slide_btn_link_2",
+"label": "Second button URL"
+},
+{
+"type": "text",
+"id": "video_btn_text",
+"label": "Video button text",
+"default": "Watch the Video"
+},
+{
+"type": "video_url",
+"id": "video_btn_link",
+"label": "Video URL",
+"accept": [
+"youtube",
+"vimeo"
+],
+"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+},
+{
+"type": "header",
+"content": "Buttons colors"
+},
+{
+"type": "color",
+"id": "color_buttons",
+"label": "Background",
+"default": "#27afc2"
+},
+{
+"type": "color",
+"id": "color_buttons_text",
+"label": "Text",
+"default": "#ffffff"
+},
+{
+"type": "header",
+"content": "Typography"
+},
+{
+"type": "range",
+"id": "heading_font_size",
+"label": "Heading size",
+"unit": "px",
+"step": 4,
+"min": 40,
+"max": 64,
+"default": 48
+},
+{
+"type": "range",
+"id": "text_font_size",
+"label": "Text size",
+"unit": "px",
+"step": 2,
+"min": 16,
+"max": 28,
+"default": 20
+},
+{
+"type": "header",
+"content": "Overlay"
+},
+{
+"type": "color",
+"id": "hero_overlay_color",
+"label": "Color",
+"default": "#000"
+},
+{
+"type": "range",
+"id": "overlay_opacity",
+"label": "Opacity",
+"min": 0,
+"max": 95,
+"step": 5,
+"unit": "%",
+"default": 30
+}
+]
+}
+],
+"presets": [
+{
+"name": "Slideshow",
+"category": "Image",
+"blocks": [
+{
+"type": "image"
+},
+{
+"type": "image"
+}
+]
+}
+]
 }
 {% endschema %}
