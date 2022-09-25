@@ -37,65 +37,57 @@ data-video-url="{{section.settings.video_url}}">
 </div>
 </div>
 
-
 {% schema %}
 {
-"name": "Video Module",
-"settings": [
-  {
-"id": "section-heading",
-"type": "text",
-"label": "Heading"
-},
-{
-"id": "video_url",
-"type": "video_url",
-"label": "Video URL for Desktop",
-"accept": ["youtube", "vimeo"],
-"info": "Supports Youtube and Vimeo",
-"default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-},
-{
-"id": "autoplay",
-"type": "checkbox",
-"label": "Autoplay",
-"default": false
-},
-
-{
-"type": "image_picker",
-"id": "desktop_background_image",
-"label": "Desktop Background Image"
-},
-{
-"type": "image_picker",
-"id": "mobile_background_image",
-"label": "Mobile Background Image"
-},
-{
-"type": "image_picker",
-"id": "desktop_overlay_image",
-"label": "Desktop Overlay Image"
-},
-{
-"type": "image_picker",
-"id": "mobile_overlay_image",
-"label": "Mobile Overlay Image"
-},
-{
-"type": "image_picker",
-"id": "video_thumbnail",
-"label": "Video Thumbanil"
-}
-],
-"presets": [
-{
-"name": "Video Module",
-"category": "Video",
-"settings": {
-"video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-}
-}
-]
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "settings": {
+        "title": "Slideshow"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Slideshow"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "templates": ["article", "index", "page", "product"]
 }
 {% endschema %}
