@@ -14,12 +14,14 @@ $(function() {
   $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     " — $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
-$('#slider-range').on('slidechange', function() {
-  var selectedPriceRange = $( "#amount" ).val();
-  var [selectedPriceMin, selectedPriceMax] = selectedPriceRange.split("—");
-  var goToUrl = 'https://spacetek.com.au/collections/all';
-  location.href = goToUrl+'?filter.v.price.gte='+selectedPriceMin+'&'+'?filter.v.price.lte='+selectedPriceMax+'';
-});
+(function() {
+  $('#slider-range').on('slidechange', function() {
+    var selectedPriceRange = $( "#amount" ).val();
+    var [selectedPriceMin, selectedPriceMax] = selectedPriceRange.split("—");
+    var goToUrl = 'https://spacetek.com.au/collections/all';
+    location.href = goToUrl+'?filter.v.price.gte='+selectedPriceMin+'&'+'?filter.v.price.lte='+selectedPriceMax+'';
+  });
+})();
 
 // Homepage Product Slider
 function triggerNextClick() {
