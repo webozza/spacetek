@@ -32,6 +32,24 @@
         </div>
       
       </div>
+
+      <div class="video-module-player" data-section-type="video">
+        <div class="video-thumbnail">
+          <div class="embed-video"
+          data-source="{{ section.settings.video_url.type }}"
+          data-video-url="{{section.settings.video_url}}">
+          </div>
+          {% if section.settings.video_thumbnail != blank %}
+          
+          <img id="video-thumb-play" src="{{ section.settings.video_thumbnail | img_url: 'master' }}" alt="video-thumbnail" />
+          <div class="video-play-icon">
+          </div>
+          {% else %}
+          <img id="video-thumb-play" src="https://fpoimg.com/700×400?text=thumbnail" alt="video-thumbnail" />
+          {% endif %}
+        </div>
+      
+      </div>
     
     {% endif %}
     </div>
