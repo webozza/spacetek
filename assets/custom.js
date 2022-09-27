@@ -66,11 +66,7 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
   loop: true,
   zoom: {
     maxRatio: 5,
-  },
-  pagination: {
-    el: '.carousel-pagination',
-    type: 'bullets',
-  },
+  }
 });
 
 // Swiper -- Thumbnail Slider
