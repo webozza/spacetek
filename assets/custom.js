@@ -80,7 +80,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
 
 $('.product-slider .swiper-slide').on('click', function() {
   var getIndex = $(this).attr('data-swiper-slide-index');
-  console.log(swiperThumb.activeIndex);
+  swiperGallery.slideTo(getIndex);
 });
 
 
