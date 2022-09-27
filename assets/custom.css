@@ -71,7 +71,7 @@ float:right;
 .group-button .product-item-button-cart:hover em, .group-button .product-item-button-quick-view:hover em, .group-button .product-item-button-wishlist:hover em {
     color: #00a5de;
 }
-.carousel-navigation:hover, .carousel-navigation:hover{background: #00a5de;}
+.carousel-navigation:hover, .carousel-navigation:hover, .product-item-label-list .product-item-label{background: #00a5de;}
 
 /*product grid*/
 .index-products-grid {
