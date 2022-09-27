@@ -71,6 +71,8 @@ float:right;
 .group-button .product-item-button-cart:hover em, .group-button .product-item-button-quick-view:hover em, .group-button .product-item-button-wishlist:hover em {
     color: #00a5de;
 }
+.carousel-navigation:hover, .carousel-navigation:hover{background: #00a5de;}
+
 /*product grid*/
 .index-products-grid {
     margin-bottom: 0px;
@@ -82,10 +84,6 @@ float:right;
     font-size: 1.1rem;
     line-height: 1.35rem;
 }
-/*.products-grid .product-item-image, .product-item-image:nth-child(2){
-    width: 450px !important;
-  height:320px !important;
-}*/
 .products-grid .product-btn{
   padding: 10px 30px;
     background: #FEBD19;
