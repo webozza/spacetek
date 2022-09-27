@@ -2,7 +2,7 @@
 <div class="index-slideshow-container {{ section.settings.display }} {{ section.settings.navigation_position }}" data-section-id="{{ section.id }}" data-slideshow-param='{"effect": "{{ section.settings.effect }}", "autoplay": "{{ section.settings.autoplay }}", "autoplaySpeed": "{{ section.settings.autoplay_speed }}", "height": "{{ section.settings.slideshow_height }}", "width": "{{ section.settings.slideshow_width }}"}' data-index-slideshow >
   {%- assign slideshow_size = section.settings.slideshow_width | append: 'x' | append: section.settings.slideshow_height -%}
   {%- if section.blocks.size > 0 -%}
-    <div class="swiper-container" data-slideshow-container>
+    <div class="swiper-container" data-slideshow-container >
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
           {%- if block.type == 'image' -%}
