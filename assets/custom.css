@@ -451,8 +451,13 @@ li.tag-filters__item:nth-last-child(-n+1) a:after{
 /*pop up*/
 .product-quick-view .product-add-cart {background: #FEBD19;}
 .product-info .product-sku, .product-info .product-inventory, .product-option-list .product-option-label{color:#666 !important;}
-em.sli.sli-arrow-plus:before, .sli-arrow-plus:before {
-    content: "\002b";
+.input-group-label .sli-arrow-minus{
+    padding-right: 5px;
+    border-right: 1px solid #02a4e55c;
+}
+.input-group-label .sli-arrow-plus{
+    padding-left: 5px;
+    border-left: 1px solid #02a4e55c;
 }
 
 /********************************** Collection Page End *******************************/
