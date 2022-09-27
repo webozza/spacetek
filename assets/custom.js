@@ -18,7 +18,7 @@ $('#slider-range').on('slidechange', function() {
   var selectedPriceRange = $( "#amount" ).val();
   var [selectedPriceMin, selectedPriceMax] = selectedPriceRange.split("—");
   var goToUrl = location.href;
-  location.href = goToUrl + '?gte='+selectedPriceMin+'' + '?lte='+selectedPriceMax+'';
+  location.href = goToUrl + '?gte='+selectedPriceMin+'&' + '?lte='+selectedPriceMax+'';
 });
 
 // Homepage Product Slider
