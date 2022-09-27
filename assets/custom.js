@@ -131,6 +131,7 @@ function fucktheSwiper() {
     }
   });
 }
+fucktheSwiper();
 
 // scroll to next section
 function scrollnext() {
