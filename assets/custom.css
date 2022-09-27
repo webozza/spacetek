@@ -316,6 +316,12 @@ background-color: #017EDA;
     margin-bottom: 40px;
 }
 .collection-page-title h2{color: #fff;}
+.products-grid a.product-btn {
+    padding: 10px 30px;
+    background: #FEBD19;
+    border-radius: 3px;
+    box-shadow: 0 4px #ff821a;
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
