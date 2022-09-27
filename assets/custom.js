@@ -92,6 +92,14 @@ $('.product-slider .swiper-slide').on('click', function() {
   swiperGallery.slideTo(clickedIndex);
 });
 
+swiperThumb.on('slideChangeTransitionEnd', function () {
+    setTimeout(function() {
+      var goToIndex = $('.product-slider .swiper-wrapper .swiper-slide-active').index();
+      console.log(goToIndex);
+      swiperGallery.slideTo(goToIndex);
+    }, 600);
+});
+
 // When not enough slides 
 var totalSlides = $('.product-slider .swiper-slide').length;
 if(totalSlides <= 3) {
