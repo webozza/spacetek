@@ -69,15 +69,16 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   allowTouchMove: true,
   slideToClickedSlide: true,
   loop: true,
+  on: {
+    slideChange: function () {
+      console.log('slide changed');
+    },
+  }
 });
 
 // $('.product-slider .swiper-slide').on('click', function() {
 //   var getIndex = $(this).attr('data-swiper-slide-index');
 // });
-
-swiper.on('slideChange', function () {
-  console.log('slide changed');
-});
 
 
 // scroll to next section
