@@ -45,7 +45,8 @@ $('.collection-product-item').each(function() {
 })();
 
 setTimeout(function() {
-  $('.spacetek-price-filter .ui-slider-horizontal').attr('style', 'height:5px')
+  $('.spacetek-price-filter .ui-slider-horizontal').attr('style', 'height:5px');
+  $('.spacetek-price-filter .ul-slider-handle').attr('style', 'font-size:5px');
 }, 600);
 
 
