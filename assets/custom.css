@@ -458,7 +458,7 @@ padding: 1.375rem 1.6875rem !important;
     border-radius: 0%;
     box-shadow: 0 0px 0px rgb(50 52 54 / 30%);
 }
-.template-product .product-slider .swiper-wrapper .swiper-slide {pointer-events: none}
+
 .product-option-value select{
   color: #333;
 }
