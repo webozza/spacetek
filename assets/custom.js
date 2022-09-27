@@ -107,6 +107,10 @@ if(totalSlides <= 3) {
   $('.product-gallery .swiper-slide:not(:first-child), .product-gallery.carousel .carousel-nav-next, .product-gallery.carousel .carousel-nav-prev').hide();
 }
 
+// Fix Gallery Slide Height
+var galleryHeight = $('.product-gallery .swiper-slide').outerHeight();
+$('.product-gallery .swiper-container').attr('style', 'height: '+galleryHeight+'px');
+
 
 // scroll to next section
 function scrollnext() {
