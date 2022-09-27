@@ -437,6 +437,7 @@ em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
 /**** swip slider *******/
 .product-thumbnail .flex-dir-column {flex-direction: row;}
 .swiper-slide {width: auto; margin-bottom:40px;}
+.product-gallery .swiper-slide-duplicate{width: 100%;}
 .swiper-container-vertical > .swiper-wrapper {flex-direction: row;}
 .product-thumbnail-nav-prev, .product-thumbnail-nav-next{transform: rotate(-90deg);margin-top: 0.75rem;}
 .product-review{float: none;text-align: center;}
