@@ -18,8 +18,8 @@ $(function() {
   $('#slider-range').on('slidechange', function() {
     var selectedPriceMin = $("#slider-range").slider( "values", 0);
     var selectedPriceMax = $( "#slider-range" ).slider( "values", 1)
-    var goToUrl = 'https://spacetek.com.au/collections/all';
-    location.href = goToUrl+'?filter.v.price.lte='+selectedPriceMax+'&'+'?filter.v.price.gte='+selectedPriceMin+'';
+    console.log(selectedPriceMin, 'selected price min');
+    console.log(selectedPriceMax, 'selected price max');
   });
 })();
 
