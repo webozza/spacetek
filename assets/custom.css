@@ -361,6 +361,11 @@ background-color: #017EDA;
     font-weight:400;
     padding: 0.84375rem 1.25rem 0.275rem !important;
 }
+.tag-filters{
+  display: flex;
+    flex-wrap: wrap;
+}
+.tag-filters li{list-style: none;}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
