@@ -51,6 +51,7 @@ var slideWidth = $(".product-slider .swiper-slide").width();
 // Swiper API
 var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .swiper-container", {
   slidesPerView: "auto",
+  spaceBetween: 10,
   direction: "horizontal",
   // Navigation arrows
   navigation: {
