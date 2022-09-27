@@ -354,6 +354,11 @@ background-color: #017EDA;
     border-radius: 3px;
     box-shadow: 0 4px #ff821a;
 }
+.collection-category-list li>a, .collection-category-list li.is-accordion-submenu-item>a{
+    text-transform: inherit;
+    font-weight: 500;
+    padding: 0.84375rem 1.25rem 0.4375rem !important;
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
