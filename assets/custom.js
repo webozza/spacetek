@@ -49,7 +49,7 @@ $(".products-grid .product-elemet").each(function () {
 var slideWidth = $(".product-slider .swiper-slide").width();
 
 // Swiper API
-var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .swiper-container", {
+var swiper = new Swiper(".product-slider .swiper-container", {
   slidesPerView: "auto",
   spaceBetween: 10,
   direction: "horizontal",
@@ -68,12 +68,7 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   mousewheel: false,
   allowTouchMove: true,
   slideToClickedSlide: true,
-  loop: true,
-  on: {
-    slideChange: function () {
-      swiper.slideTo(0);
-    },
-  }
+  loop: true
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
