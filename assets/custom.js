@@ -70,19 +70,9 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   loop: true,
 });
 
-$('.product-slider .swiper-slide').on('click', function() {
-  // Get Active Slide Index
-  var getIndex = $(this).attr('data-swiper-slide-index');
-  // Remove Current Active, Next and Prev
-
-  // Slide to Index
-  setTimeout(function() {
-    var currentSlide = $('.product-gallery .swiper-slide-active');
-    console.log(currentSlide);
-  }, 600);
-  
-    
-});
+// $('.product-slider .swiper-slide').on('click', function() {
+//   var getIndex = $(this).attr('data-swiper-slide-index');
+// });
 
 
 // scroll to next section
