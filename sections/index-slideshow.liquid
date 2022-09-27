@@ -26,49 +26,49 @@
                 {%- endif -%}
               </div>
               {%- if block.settings.title != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-title {{ block.settings.title_style }}">
+                <div class="index-slideshow-caption index-slideshow-caption-title {{ block.settings.title_style }}" >
                   <div class="animated" data-slideshow-caption='{"type": "text", "positionX": "{{ block.settings.title_x }}", "positionY": "{{ block.settings.title_y }}", "zIndex": "{{ block.settings.title_z }}", "align" : "{{ block.settings.title_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}'>{{ block.settings.title }}</div>
                 </div>
               {%- endif -%}
               {%- if block.settings.description != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-description {{ block.settings.description_style }}">
+                <div class="index-slideshow-caption index-slideshow-caption-description {{ block.settings.description_style }}" >
                   <div class="animated" data-slideshow-caption='{"type": "text", "positionX": "{{ block.settings.description_x }}", "positionY": "{{ block.settings.description_y }}", "zIndex": "{{ block.settings.description_z }}", "align" : "{{ block.settings.description_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}'>{{ block.settings.description }}</div>
                 </div>
               {%- endif -%}
               {%- if block.settings.action != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-action {{ block.settings.action_style }}">
+                <div class="index-slideshow-caption index-slideshow-caption-action {{ block.settings.action_style }}" >
                   <a href="{{ block.settings.link }}" class="flex-container align-middle animated" data-slideshow-caption='{"type": "text", "positionX": "{{ block.settings.action_x }}", "positionY": "{{ block.settings.action_y }}", "zIndex": "{{ block.settings.action_z }}", "align" : "{{ block.settings.action_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}'>
                     {{ block.settings.action }}
                   </a>
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_1 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_1 | img_url: 'master' }}" alt="{{ block.settings.caption_1.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_1_x }}", "positionY": "{{ block.settings.caption_1_y }}", "zIndex": "{{ block.settings.caption_1_z }}", "align" : "{{ block.settings.caption_1_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}'/>
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_2 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_2 | img_url: 'master' }}" alt="{{ block.settings.caption_2.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_2_x }}", "positionY": "{{ block.settings.caption_2_y }}", "zIndex": "{{ block.settings.caption_2_z }}", "align" : "{{ block.settings.caption_2_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}'/>
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_3 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_3 | img_url: 'master' }}" alt="{{ block.settings.caption_3.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_3_x }}", "positionY": "{{ block.settings.caption_3_y }}", "zIndex": "{{ block.settings.caption_3_z }}", "align" : "{{ block.settings.caption_3_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}' />
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_4 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_4 | img_url: 'master' }}" alt="{{ block.settings.caption_4.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_4_x }}", "positionY": "{{ block.settings.caption_4_y }}", "zIndex": "{{ block.settings.caption_4_z }}", "align" : "{{ block.settings.caption_4_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}' />
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_5 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_5 | img_url: 'master' }}" alt="{{ block.settings.caption_5.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_5_x }}", "positionY": "{{ block.settings.caption_5_y }}", "zIndex": "{{ block.settings.caption_5_z }}", "align" : "{{ block.settings.caption_5_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}' />
                 </div>
               {%- endif -%}
               {%- if block.settings.caption_6 != blank -%}
-                <div class="index-slideshow-caption index-slideshow-caption-image">
+                <div class="index-slideshow-caption index-slideshow-caption-image" >
                   <img src="{{ block.settings.caption_6 | img_url: 'master' }}" alt="{{ block.settings.caption_6.alt }}" class="animated" data-slideshow-caption='{"type": "image", "positionX": "{{ block.settings.caption_6_x }}", "positionY": "{{ block.settings.caption_6_y }}", "zIndex": "{{ block.settings.caption_6_z }}", "align" : "{{ block.settings.caption_6_align }}", "entranceEffect": "{{ block.settings.entrance_effect }}", "exitEffect": "{{ block.settings.exit_effect }}"}' />
                 </div>
               {%- endif -%}
