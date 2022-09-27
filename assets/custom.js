@@ -71,7 +71,7 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   loop: true,
   on: {
     slideChange: function () {
-      this.attr('data-swiper-slide-index');
+      swiper.slideTo(0);
     },
   }
 });
