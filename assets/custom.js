@@ -63,7 +63,7 @@ var swiper = new Swiper(".product-slider .swiper-container", {
   scrollbar: {
     el: ".product-slider .swiper-scrollbar-drag",
     draggable: true,
-    dragSize: slideWidth,
+    dragSize: 100,
   },
   mousewheel: false,
   allowTouchMove: true,
@@ -72,7 +72,6 @@ var swiper = new Swiper(".product-slider .swiper-container", {
 });
 
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  loop: true,
   navigation: {
     nextEl:
       ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
