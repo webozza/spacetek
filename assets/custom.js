@@ -47,7 +47,7 @@ $(".products-grid .product-elemet").each(function () {
 
 // Swiper API -- Main Slider
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  slidesPerView: 1,
+  slidesPerView: "auto",
   spaceBetween: 10,
   direction: "horizontal",
   navigation: {
