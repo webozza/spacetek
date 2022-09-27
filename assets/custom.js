@@ -71,8 +71,17 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
-    var getIndex = $(this).attr('data-swiper-slide-index');
-    console.log(getIndex);
+  // Get Active Slide Index
+  var getIndex = $(this).attr('data-swiper-slide-index');
+  // Remove Current Active, Next and Prev
+
+  // Slide to Index
+  setTimeout(function() {
+    var currentSlide = $('.product-gallery .swiper-slide[data-swiper-slide-index="'+getIndex+'"]');
+    console.log(currentSlide);
+  }, 600);
+  
+    
 });
 
 
