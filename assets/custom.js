@@ -76,7 +76,7 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
 
 $('.product-slider .swiper-slide').on('click', function() {
   var getIndex = $(this).attr('data-swiper-slide-index');
-  swiper.activeIndex;
+  console.log(swiper.activeIndex);
 });
 
 
