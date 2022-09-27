@@ -36,14 +36,17 @@ $('.collection-product-item').each(function() {
       console.log(dataPriceMax);
     });
 
+    if()
+    
     $('.collection-product-item').hide();
     
     $('.collection-product-item[data-price-range]').filter(function() {
-      return $(this).data('price-range') <= selectedPriceMax || $(this).data('price-range') >= selectedPriceMin
+      return $(this).data('price-range') < selectedPriceMax + 1 || $(this).data('price-range') > selectedPriceMin + 1
     }).show('slow');
     
   });
 })();
+
 
 // Homepage Product Slider
 function triggerNextClick() {
