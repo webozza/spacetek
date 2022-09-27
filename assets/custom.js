@@ -93,17 +93,13 @@ $('.product-slider .swiper-slide').on('click', function() {
 });
 
 swiperThumb.on('slideChangeTransitionEnd', function () {
-    setTimeout(function() {
       var goToIndex = $('.product-slider .swiper-wrapper .swiper-slide-active').index();
       swiperGallery.slideTo(goToIndex);
-    }, 600);
 });
 
 swiperGallery.on('slideChangeTransitionEnd', function () {
-    setTimeout(function() {
       var goToIndex = $('.product-gallery .swiper-wrapper .swiper-slide-active').index();
       swiperThumb.slideTo(goToIndex); 
-    }, 600);
 });
 
 // When not enough slides 
