@@ -24,13 +24,15 @@
   </div>
 </div>
 <div class="">
-  <div class="product-tag-content">
-    <ul class="no-bullet margin-0">
-      <li>
-        {%- for tag in product.tags -%}
-            <a href="/collections/all/{{ tag | handle }}" class="display-inline-block">{{ tag | handle }}</a>
-        {%- endfor -%}
-      </li>
+  {% if collection.all_tags.size > 0 %}
+    <ul class="tag-filters">
+      {% for tag in collection.all_tags %}
+        {% if current_tags contains tag %}
+          <li class="tag-filters__item active">{{ tag | link_to_remove_tag: tag }}</li>
+        {% else %}
+          <li class="tag-filters__item">{{ tag | link_to_add_tag: tag }}</li>
+        {% endif %}
+      {% endfor %}
     </ul>
-  </div>
+  {% endif %}
 </div>
