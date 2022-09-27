@@ -38,11 +38,12 @@ function resizeCustomContentHeight() {
 }
 
 // Creating the Add to Cart Buttons for Homepage
-$(".products-grid .product-elemet").each(function () {
-  var cartLink = $(this).find(".product-item-buttons a").attr("href");
+$("body.template-collection .collection-product-list > div .collection-product-item, .products-grid .product-elemet").each(function () {
+  var cartLink = $(this).find(".group-button a").attr("href");
+  var dataHandle = $(this).find('a.group-button-quickview').attr('data-handle');
   $(this)
     .find(".product-item")
-    .append('<a class="product-btn" href="' + cartLink + '">Add to Cart</a>');
+    .append('<a class="product-btn" href="'+ cartLink+'" data-quick-view data-handle="'+dataHandle+'">Add to Cart</a>');
 });
 
 // Swiper API -- Main Slider
