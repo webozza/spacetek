@@ -32,7 +32,7 @@
       <label>Shop by price</label>
       <select class="coll-picker">
         <option value="all">All</option>
-        {% assign price_collections = 'under-100,100-120,over-120' | split: ',' %}
+        {% assign price_collections = 'under-1000' | split: ',' %}
         {% for pc_handle in price_collections %}
           <option value="{{ pc_handle }}" {% if collection.handle == pc_handle %}selected{% endif %}>{{ collections[pc_handle].title }}</option>
         {% endfor %}
