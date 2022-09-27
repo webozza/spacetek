@@ -451,6 +451,9 @@ li.tag-filters__item:nth-last-child(-n+1) a:after{
 /*pop up*/
 .product-quick-view .product-add-cart {background: #FEBD19;}
 .product-info .product-sku, .product-info .product-inventory, .product-option-list .product-option-label{color:#666 !important;}
+em.sli.sli-arrow-plus:before, .sli-arrow-plus:before {
+    content: "\002b";
+}
 
 /********************************** Collection Page End *******************************/
 
