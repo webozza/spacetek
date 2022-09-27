@@ -114,8 +114,10 @@ if(totalSlides <= 3) {
 }
 
 // Fix Gallery Slide Height
-var galleryHeight = $('.product-gallery .swiper-slide').outerHeight();
-$('.product-gallery .swiper-container').attr('style', 'height: '+galleryHeight+'px');
+setTimeout(function() {
+  var galleryHeight = $('.product-gallery .swiper-slide').outerHeight();
+  $('.product-gallery .swiper-container').attr('style', 'height: '+galleryHeight+'px');
+}, 1000);
 
 
 // scroll to next section
