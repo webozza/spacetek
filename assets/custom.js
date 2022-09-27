@@ -92,6 +92,12 @@ $('.product-slider .swiper-slide').on('click', function() {
   swiperGallery.slideToClosest(thumbActive);
 });
 
+// When not enough slides 
+var totalSlides = $('.product-slider .swiper-slide').length;
+if(totalSlides <= 3) {
+  $('.product-slider').hide();
+}
+
 
 // scroll to next section
 function scrollnext() {
