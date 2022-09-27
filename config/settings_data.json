@@ -512,7 +512,7 @@
               "title": "Product Categories",
               "position": "left_sidebar",
               "display": "",
-              "product_count": true
+              "product_count": false
             }
           }
         },
