@@ -114,7 +114,7 @@ setTimeout(function() {
   var galleryHeight = $('.product-gallery .swiper-slide').outerHeight();
   $('.product-gallery .swiper-container').attr('style', 'height: '+galleryHeight+'px');
   var containerWidth = $('.product-gallery .swiper-container').width();
-  $('.product-gallery .swiper-slide').attr('style', 'width: '+containerWidth+'')
+  $('.product-gallery .swiper-slide').attr('style', 'width: '+containerWidth+'px')
 }, 1000);
 
 
