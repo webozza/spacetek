@@ -113,11 +113,11 @@
           {% comment %}
               image slider & share button section starts here
           {% endcomment %}
-              <div class="product-thumbnail show-for-large product-slider" data-product-thumbnail-param="{'direction':'horizontal'}" data-product-thumbnail>
+              <div class="product-thumbnail show-for-large product-slider" data-product-thumbnail>
                 <div class="flex-container flex-dir-column align-middle">
                   <div class="product-thumbnail-nav-prev" data-carousel-nav-prev><em class="sli sli-arrow-up"></em></div>
                   <div class="swiper-container" data-carousel-container>
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" style="flex-direction: column !important">
                       {%- assign thumb_height = section.settings.image_height | times: 100 | divided_by: section.settings.image_width | round -%}
                       {%- assign thumb_size = '100x' | append: thumb_height -%}
                       {% for image in product.images %}
