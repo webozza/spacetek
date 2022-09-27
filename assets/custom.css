@@ -750,7 +750,7 @@ padding: 1.375rem 1.6875rem !important;
 .contact-title {text-transform: initial;}
 }
 @media print, screen and (min-width: 50.0625em){
-  .product-item .product-btn:hover{color:#00a5de;}
+  .product-item .product-btn:hover{color:#fff;}
 .product .tabs-panel {
     padding: 1.625rem 1.6875rem 2.0625rem;
     margin-bottom: 0rem;
