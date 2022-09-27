@@ -36,10 +36,8 @@ $('.collection-product-item').each(function() {
       console.log(dataPriceMax);
     });
 
-    $('.collection-product-item[data-price-range]').filter(function() {
-      return $(this).data('price-range') > selectedPriceMax || $(this).data('price-range') < selectedPriceMin
-    }).hide();
-
+    $('.collection-product-item').hide();
+    
     $('.collection-product-item[data-price-range]').filter(function() {
       return $(this).data('price-range') <= selectedPriceMax || $(this).data('price-range') >= selectedPriceMin
     }).show('slow');
