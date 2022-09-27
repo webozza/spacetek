@@ -138,7 +138,7 @@ function scrollnext() {
 scrollnext();
 
 // Homepage Product Lists
-$("body.template-index .product-item").each(function () {
+$("body.template-index .product-item, body.template-collection .product-item").each(function () {
   // Grabs the product link, creates a detail button and appends the grabbed link
   var productLink = $(this).find("a").attr("href");
   $(this)
