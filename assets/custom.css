@@ -316,7 +316,10 @@ background-color: #017EDA;
     margin-bottom: 40px;
 }
 .collection-page-title h2{color: #fff;}
-.collection-category-list li>a{border:0;color: #222222;}
+.collection-category-list li>a{border: 0px solid #d0d0d0!important;color: #222222;}
+.conllections-list > li > a:hover, .collection-category-list > li > a:hover {
+    color: #00abe7;
+}
 .layout-sidebar-title h3 {
     text-transform: initial;
     color: #00a5de;
