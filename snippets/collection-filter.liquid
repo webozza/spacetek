@@ -7,7 +7,9 @@
 <div class="{{ layout_class }} collection-filter {{ block.settings.display }}">
   {%- if block.settings.title != blank -%}
     <div class="{{ layout_class }}-title">
-      <h3>{{ block.settings.title }}</h3>
+    {%- comment -%}  
+    <h3>{{ block.settings.title }}</h3>
+    {%- endcomment -%}  
     </div>
   {%- endif -%}
   <div class="{{ layout_class }}-content">
