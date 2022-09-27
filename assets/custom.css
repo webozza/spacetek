@@ -448,6 +448,10 @@ li.tag-filters__item:after {
 li.tag-filters__item:nth-last-child(-n+1) a:after{
     content: '';
 }
+/*pop up*/
+.product-quick-view .product-add-cart {
+    background: #FEBD19;
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
@@ -893,17 +897,19 @@ padding: 1.375rem 1.6875rem !important;
 .contact-title {text-transform: initial;}
 }
 @media print, screen and (min-width: 50.0625em){
-  .product-item .product-btn:hover{color:#fff;}
+.product-item .product-btn:hover{color:#fff;}
 .product .tabs-panel {
     padding: 1.625rem 1.6875rem 2.0625rem;
     margin-bottom: 0rem;
     border-bottom: 2px solid #e7e7e7;
 }
-  .product-option-size span {width: 6.1875rem;}
-  .product-title {font-size: 2.2rem;}
-  .product-quantity .input-group-field {height: 2.5rem;}
-  .product-add-cart-container {justify-content: flex-start;}
-  a:hover, a:focus, a:active, a.active {color: #00a5de;}
+.product-option-size span {width: 6.1875rem;}
+.product-title {font-size: 2.2rem;}
+.product-quantity .input-group-field {height: 2.5rem;}
+.product-add-cart-container {justify-content: flex-start;}
+a:hover, a:focus, a:active, a.active {color: #00a5de;}
+.product-quick-view {border-radius: 10px;}
+
 }
 @media screen and (max-width: 34.43625em){
 .index-slideshow-container {
