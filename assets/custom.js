@@ -88,8 +88,8 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
-  var thumbActive = swiperThumb.realIndex;
-  swiperGallery.slideToClosest(thumbActive);
+  var clickedIndex = swiperThumb.clickedIndex;
+  swiperGallery.slideToClosest(clickedIndex);
 });
 
 // When not enough slides 
