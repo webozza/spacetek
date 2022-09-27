@@ -93,7 +93,7 @@
                         <div class="swiper-wrapper">
                           {% for image in product.images %}
                             <div class="swiper-slide" data-carousel-item="{{ image.src | handle }}">
-                              <img src="{{ 'icon-loader-clock.svg' | asset_url }}" data-src="{{ image.src | img_url: product_thumb_size, crop: 'center', scale: 2 }}" data-height="{{ section.settings.image_height }}" data-width="{{ section.settings.image_width }}" class="swiper-lazy width-100" alt="{{ image.alt | escape }}"/>
+                              <img src="{{ image.src | img_url: product_thumb_size, crop: 'center', scale: 2 }}" data-height="{{ section.settings.image_height }}" data-src="{{ image.src | img_url: product_thumb_size, crop: 'center', scale: 2 }}" data-height="{{ section.settings.image_height }}" data-width="{{ section.settings.image_width }}" class="swiper-lazy width-100" alt="{{ image.alt | escape }}"/>
                             </div>
                           {%- endfor -%}
                         </div>
