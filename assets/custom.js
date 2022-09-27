@@ -16,9 +16,9 @@ $(function() {
 });
 $('#slider-range').on('slidechange', function() {
   var selectedPriceRange = $( "#amount" ).val();
-  var [selectedPriceRangeMin, selectedPriceMax] = selectedPriceRange.split("—");
-  console.log(selectedPriceRangeMin);
-  console.log(selectedPriceMax);
+  var [selectedPriceMin, selectedPriceMax] = selectedPriceRange.split("—");
+  var goToUrl = location.href;
+  location.href = goToUrl + '?gte='+selectedPriceMin+'' + '?lte='+selectedPriceMax+'';
 });
 
 // Homepage Product Slider
