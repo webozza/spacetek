@@ -67,8 +67,13 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   mousewheel: false,
   allowTouchMove: true,
   slideToClickedSlide: true,
-  loop: true
+  loop: true,
 });
+
+$('.product-slider .swiper-slide').on('click', function() {
+  swiper.slideTo(1);
+});
+
 
 // scroll to next section
 function scrollnext() {
