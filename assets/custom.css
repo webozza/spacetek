@@ -369,6 +369,9 @@ background-color: #017EDA;
 li.tag-filters__item:after {
     content: ',';
 }
+li.tag-filters__item:after:nth-last-child() {
+    content: '';
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
