@@ -49,7 +49,7 @@ $(".products-grid .product-elemet").each(function () {
 var slideWidth = $(".product-slider .swiper-slide").width();
 
 // Swiper API
-var swiper = new Swiper(".product-slider .swiper-container", {
+var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .swiper-container", {
   slidesPerView: "auto",
   spaceBetween: 10,
   direction: "horizontal",
@@ -72,12 +72,7 @@ var swiper = new Swiper(".product-slider .swiper-container", {
 });
 
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  navigation: {
-    nextEl:
-      ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
-    prevEl:
-      ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
-  }
+  // eat shit nigga
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
