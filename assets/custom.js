@@ -48,12 +48,21 @@ $(".products-grid .product-elemet").each(function () {
 // Swiper API -- Main Slider
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
   slidesPerView: 1,
+  spaceBetween: 10,
+  direction: "horizontal",
   navigation: {
     nextEl:
       ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
     prevEl:
       ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
   },
+  scrollbar: {
+    el: ".product-gallery .swiper-scrollbar-drag",
+    draggable: true,
+  },
+  mousewheel: false,
+  allowTouchMove: true,
+  slideToClickedSlide: true,
   loop: true,
 });
 
@@ -70,7 +79,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
   },
   scrollbar: {
     el: ".product-slider .swiper-scrollbar-drag",
-    draggable: false,
+    draggable: true,
   },
   mousewheel: false,
   allowTouchMove: true,
@@ -79,7 +88,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
-  swiperGallery.slideTo(swiperThumb.realIndex);
+  swiperGallery.slideToClosest(swiperThumb.activeIndex);
 });
 
 
