@@ -365,7 +365,10 @@ background-color: #017EDA;
   display: flex;
     flex-wrap: wrap;
 }
-.tag-filters li{list-style: none;}
+.tag-filters li{list-style: none;margin-right:10px;}
+li.tag-filters__item:after {
+    content: ',';
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
