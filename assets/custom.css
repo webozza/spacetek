@@ -453,6 +453,7 @@ li.tag-filters__item:nth-last-child(-n+1) a:after{
 .product-quick-view .product-add-cart {background: #FEBD19;}
 .product-info .product-sku, .product-info .product-inventory, .product-option-list .product-option-label{color:#fff !important;}
 .product-info li{color:#fff !important;}
+.product-quick-view-close {background: #FEBD19;}
 .input-group-label .sli-arrow-minus{
     padding-right: 5px;
     border-right: 1px solid #02a4e55c;
