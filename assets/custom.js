@@ -32,7 +32,7 @@ $('.collection-product-item').each(function() {
 
     // Initiate the Filter
     if($('.collection-product-item').attr('data-price-range') > selectedPriceMax) {
-      $(this).hide();
+      $('.collection-product-item').hide();
     }
   });
 })();
