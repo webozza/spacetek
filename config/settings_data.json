@@ -514,21 +514,10 @@
               "display": "",
               "product_count": false
             }
-          },
-          "60b05322-e087-47b7-bbbb-43e5b8ec1228": {
-            "type": "collection-filter",
-            "settings": {
-              "title": "Filter By Price",
-              "position": "left_sidebar",
-              "display": "",
-              "type": "other",
-              "tags": "Under $150 | Under $50 - $500"
-            }
           }
         },
         "block_order": [
-          "0ff0ace7-ea95-48c7-8c0f-0f0294d7a1b9",
-          "60b05322-e087-47b7-bbbb-43e5b8ec1228"
+          "0ff0ace7-ea95-48c7-8c0f-0f0294d7a1b9"
         ],
         "settings": {
           "collection_title": true,
