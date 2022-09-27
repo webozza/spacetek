@@ -31,7 +31,7 @@ $('.collection-product-item').each(function() {
     console.log(selectedPriceMax, 'selected price max');
 
     // Initiate the Filter
-    if($('.collection-product-item') > selectedPriceMax) {
+    if($('.collection-product-item').attr('data-price-range') > selectedPriceMax) {
       $(this).hide();
     }
   });
