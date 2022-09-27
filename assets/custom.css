@@ -308,6 +308,16 @@ background-color: #017EDA;
 }
 /********************************** Home Page End *******************************/
 
+/********************************** Collection Page End *******************************/
+.collection-page-title{
+    margin-top: 40px;
+    background: #00a5de;
+    padding: 12px 10px 1px;
+    margin-bottom: 40px;
+}
+.collection-page-title h2{color: #fff;}
+/********************************** Collection Page End *******************************/
+
 /************************ Contact Starlink Page Start ************************************/
 .contact-startlink-page, .custom-text{position: relative;}
 .contact-startlink-page, .custom-text .welcome-outter {
