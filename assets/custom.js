@@ -29,7 +29,11 @@ $('.collection-product-item').each(function() {
     var selectedPriceMax = $( "#slider-range" ).slider( "values", 1)
     console.log(selectedPriceMin, 'selected price min');
     console.log(selectedPriceMax, 'selected price max');
-    $('.collection-product-item:not([data-price-range="'+selectedPriceMax+'"])').hide('slow');
+
+    // Initiate the Filter
+    if($('.collection-product-item') > selectedPriceMax) {
+      $(this).hide();
+    }
   });
 })();
 
