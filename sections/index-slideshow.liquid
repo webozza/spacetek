@@ -6,7 +6,7 @@
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
           {%- if block.type == 'image' -%}
-            <div class="swiper-slide" data-slideshow-slide-type="image" data-slideshow-slide>
+            <div class="swiper-slide" data-slideshow-slide-type="image" data-slideshow-slide >
               {%- if block.settings.link != blank and block.settings.action == blank -%}
                 <a class="index-slideshow-link" href="{{ block.settings.link }}"></a>
               {%- endif -%}
@@ -75,7 +75,7 @@
             </div>
           {%- endif -%}
           {%- if block.type == 'video' -%}
-            <div class="swiper-slide" data-slideshow-slide-type="video" data-slideshow-slide>
+            <div class="swiper-slide" data-slideshow-slide-type="video" data-slideshow-slide >
               <div id="slideshow-video-container-{{ block.id }}" class="index-slideshow-video-container" data-slideshow-video='{"type": "{{ block.settings.video_type }}", "id": "{{ block.settings.video_url.id }}", "autoplay": "{{ block.settings.autoplay }}"}'>
                 {%- if block.settings.image != blank -%}
                   {%- if forloop.first == true -%}
@@ -85,7 +85,7 @@
                   {%- endif -%}
                 {%- endif -%}
                 <div class="index-slideshow-video-loader"></div>
-                <div data-id="{{ block.settings.video_url.id }}" data-slideshow-video-place></div>
+                <div data-id="{{ block.settings.video_url.id }}" data-slideshow-video-place ></div>
               </div>
             </div>
           {%- endif -%}
@@ -94,17 +94,17 @@
     </div>
     {%- if section.settings.pagination -%}
       <!-- If we need pagination -->
-      <div class="index-slideshow-pagination" data-slideshow-pagination></div>
+      <div class="index-slideshow-pagination" data-slideshow-pagination ></div>
     {%- endif -%}
     {%- if section.settings.navigation -%}
       <!-- If we need navigation buttons -->
-      <div class="index-slideshow-navigation index-slideshow-nav-prev show-for-large" data-slideshow-nav-prev>
+      <div class="index-slideshow-navigation index-slideshow-nav-prev show-for-large" data-slideshow-nav-prev >
         <!-- <em class="sli sli-arrow-left"></em> -->
         <svg class="svg-icon">
           <use xlink:href="#icon-arrow-right"></use>
         </svg>
       </div>
-      <div class="index-slideshow-navigation index-slideshow-nav-next show-for-large" data-slideshow-nav-next>
+      <div class="index-slideshow-navigation index-slideshow-nav-next show-for-large" data-slideshow-nav-next >
         <!-- <em class="sli sli-arrow-right"></em> -->
         <svg class="svg-icon">
           <use xlink:href="#icon-arrow-right"></use>
