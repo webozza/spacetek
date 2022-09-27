@@ -46,9 +46,9 @@ body div.ui-slider-range.ui-widget-header {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-  background: #2ecaf9 !important;
+  background: #00a5de !important;
   border-radius: 50%;
-  font-size: 21px;
+  font-size: 5px;
   border: none !important;
   box-shadow: 0 0 7px #306473;
   &:focus {
@@ -58,19 +58,20 @@ body div.ui-slider-range.ui-widget-header {
 span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
 }
-
 .spacetek-price-filter .range-value {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 .spacetek-price-filter .range-value input[readonly] {
     background: transparent;
     border: none;
     font-size: 0.875rem;
     color: #333;
     margin: 0;
+}
+.spacetek-price-filter .ui-slider-horizontal {
+    height: 5px;
 }
 
 /*fonts & style*/
