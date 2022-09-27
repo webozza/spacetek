@@ -4,9 +4,9 @@ $ = jQuery;
 $(function() {
 	$( "#slider-range" ).slider({
 	  range: true,
-	  min: 130,
-	  max: 500,
-	  values: [ 130, 250 ],
+	  min: 0,
+	  max: 2000,
+	  values: [ 0, 2000 ],
 	  slide: function( event, ui ) {
 		$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 	  }
