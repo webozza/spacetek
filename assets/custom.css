@@ -316,7 +316,12 @@ background-color: #017EDA;
     margin-bottom: 40px;
 }
 .collection-page-title h2{color: #fff;}
-.product-grid .product-item{text-align:center;}
+.product-grid .product-item {
+    text-align: center;
+    background: #F2F2F2;
+    border-radius: 5px;
+    padding-bottom: 40px;
+}
 .product-grid .product-btn {
     padding: 10px 30px;
     background: #FEBD19;
