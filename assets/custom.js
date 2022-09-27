@@ -66,7 +66,8 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   },
   mousewheel: false,
   allowTouchMove: true,
-  slideToClickedSlide: true
+  slideToClickedSlide: true,
+  loop: true
 });
 
 // scroll to next section
