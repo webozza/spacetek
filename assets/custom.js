@@ -88,7 +88,8 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
-  swiperGallery.slideToClosest(swiperThumb.activeIndex);
+  var thumbActive = swiperThumb.realIndex;
+  swiperGallery.slideToClosest(thumbActive);
 });
 
 
