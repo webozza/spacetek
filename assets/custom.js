@@ -31,9 +31,8 @@ $('.collection-product-item').each(function() {
     console.log(selectedPriceMax, 'selected price max');
 
     // Initiate the Filter
-    if($('.collection-product-item').attr('data-price-range') > selectedPriceMax) {
-      $('.collection-product-item').hide();
-    }
+    var dataPriceMax = $('.collection-product-item').attr('data-price-range');
+    console.log(dataPriceMax);
   });
 })();
 
