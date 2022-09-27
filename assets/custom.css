@@ -369,7 +369,7 @@ background-color: #017EDA;
 li.tag-filters__item:after {
     content: ',';
 }
-li.tag-filters__item:after:nth-last-child() {
+li.tag-filters__item:nth-last-child():after{
     content: '';
 }
 /********************************** Collection Page End *******************************/
