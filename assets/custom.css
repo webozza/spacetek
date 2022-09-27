@@ -1,3 +1,49 @@
+/* Price Range Filter Slider*/
+.price-range-slider {
+	width:100%;
+  float:left;
+  padding:10px 20px;
+	.range-value {
+		margin:0;
+		input {
+			width:100%;
+			background:none;
+			color: #000;
+			font-size: 16px;
+			font-weight: initial;
+			box-shadow: none;
+			border: none;
+			margin: 20px 0 20px 0;
+		}
+	}
+	
+	.range-bar {
+		border: none;
+		background: #000;
+		height: 3px;	
+		width: 96%;
+		margin-left: 8px;
+		
+		.ui-slider-range {
+			background:#06b9c0;
+		}
+		
+		.ui-slider-handle {
+			border:none;
+			border-radius:25px;
+			background:#fff;
+			border:2px solid #06b9c0;
+			height:17px;
+			width:17px;
+			top: -0.52em;
+			cursor:pointer;
+		}
+		.ui-slider-handle + span {
+			background:#06b9c0;
+		}
+	}
+}
+
 /*fonts & style*/
 .custom-content .section-heading2, .custom-content .section-heading, .box-title, .product-item-title, .product-item-price, .bg-content .heading, h1, h2, h3, h4, h5, h6, p {font-family: 'Poppins',sans-serif !important;}
 .custom-content .section-heading2, .custom-content .section-heading, .box-title, .video-title, .bg-content .heading, .custom-content-image .section-heading{
