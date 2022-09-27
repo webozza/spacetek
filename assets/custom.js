@@ -31,18 +31,15 @@ $('.collection-product-item').each(function() {
     console.log(selectedPriceMax, 'selected price max');
 
     // Initiate the Filter
-    $('.collection-product-item').each(function() {
-      var dataPriceMax = $(this).attr('data-price-range');
-      console.log(dataPriceMax);
-    });
-
-    if()
+    if($('.collection-product-item').data('price-range') > selectedPriceMax && .collection-product-item').data('price-range') < selectedPriceMin ) {
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
     
-    $('.collection-product-item').hide();
-    
-    $('.collection-product-item[data-price-range]').filter(function() {
-      return $(this).data('price-range') < selectedPriceMax + 1 || $(this).data('price-range') > selectedPriceMin + 1
-    }).show('slow');
+    // $('.collection-product-item[data-price-range]').filter(function() {
+    //   return $(this).data('price-range') < selectedPriceMax || $(this).data('price-range') > selectedPriceMin
+    // }).show('slow');
     
   });
 })();
