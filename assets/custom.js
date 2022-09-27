@@ -68,6 +68,10 @@ var swiper = new Swiper(".product-slider .swiper-container", {
   mousewheel: false,
   allowTouchMove: true,
   slideToClickedSlide: true,
+  loop: true,
+});
+
+var swiperGallery = new Swiper(".product-gallery .swiper-container", {
   loop: true
 });
 
