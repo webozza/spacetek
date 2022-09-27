@@ -8,16 +8,17 @@ $(function() {
     max: 2000,
     values: [ 0, 2000 ],
     slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      $( "#amount" ).val( "$" + ui.values[ 0 ] + " — $" + ui.values[ 1 ] );
     }
   });
   $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    " — $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
 $('#slider-range').on('slidechange', function() {
   var selectedPriceRange = $( "#amount" ).val();
-  console.log(ui.values[ 0 ]);
-  console.log(selectedPriceRange);
+  var [selectedPriceRangeMin, selectedPriceMax] = selectedPriceRange.split("—");
+  console.log(selectedPriceRangeMin);
+  console.log(selectedPriceMax);
 });
 
 // Homepage Product Slider
