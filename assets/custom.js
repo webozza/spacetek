@@ -45,93 +45,28 @@ $(".products-grid .product-elemet").each(function () {
     .append('<a class="product-btn" href="' + cartLink + '">Add to Cart</a>');
 });
 
-// DEAD FUNCTION
-function fucktheSwiper() {
-  // Doing the Math
-  var slideWidth = $(".product-slider .swiper-slide-duplicate").width();
-  var totalSlides = $(".product-slider .swiper-slide-duplicate").length / 2;
-  var loopWidth = slideWidth * totalSlides;
+// Product Gallery Slider
+var slideWidth = $(".product-slider .swiper-slide").width();
 
-  // Product Thumbnail Slider
-  function fuckSwiper() {
-    $(".template-product .product-slider .swiper-wrapper").attr(
-      "style",
-      "transform:translate3d(0px, 0px, 0px)"
-    );
-  }
-  fuckSwiper();
-
-  // Clicks Swiper Slider Controls
-  $(
-    ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next, .product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev"
-  ).on("click", function () {
-    var loopOneActive = $(".product-slider .swiper-wrapper > div")
-      .eq(totalSlides)
-      .hasClass("swiper-slide-active");
-    var loopTwoActive = $(".product-slider .swiper-wrapper > div")
-      .eq(totalSlides * 2)
-      .hasClass("swiper-slide-active");
-    // if(loopOneActive || loopTwoActive) {
-    //   loopOneEnds();
-    //   console.log('activated');
-    // }
-  });
-
-  setTimeout(function () {
-    // Swiper API
-    var swiper = new Swiper(".product-slider .swiper-container", {
-      slidesPerView: "auto",
-      direction: "horizontal",
-      // Navigation arrows
-      navigation: {
-        nextEl:
-          ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
-        prevEl:
-          ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
-      },
-      scrollbar: {
-        el: ".product-slider .swiper-scrollbar-drag",
-        draggable: false,
-        dragSize: 100,
-      },
-      mousewheel: false,
-      allowTouchMove: false,
-    });
-  }, 2000);
-
-  // On Last Slide
-  var totalSlides = $(".product-slider .swiper-slide").length / 3 - 1;
-  var slideWidth = -$(".product-slider .swiper-slide").width();
-
-  // On Next Click
-  $(
-    ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next"
-  ).on("click", function () {
-    var matrix = $(".product-slider .swiper-wrapper").css("transform");
-    var matrixType = matrix.includes("3d") ? "3d" : "2d";
-
-    var matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(", ");
-    if (matrixType === "2d") {
-      var transX = matrixValues[4];
-    }
-    var currentSlideIndex = $(".product-slider .swiper-slide-active").attr(
-      "data-swiper-slide-index"
-    );
-
-    console.log("next", transX);
-
-    if (currentSlideIndex == totalSlides) {
-      setTimeout(function () {
-        $(".product-slider .swiper-wrapper").attr(
-          "style",
-          "transform: translate3d(" + transX - 208 + "px, 0px, 0px)"
-        );
-      }, 1200);
-      console.log("activated");
-    }
-  });
-}
-fucktheSwiper();
+// Swiper API
+var swiper = new Swiper(".product-slider .swiper-container", {
+  slidesPerView: "auto",
+  direction: "horizontal",
+  // Navigation arrows
+  navigation: {
+    nextEl:
+      ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
+    prevEl:
+      ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
+  },
+  scrollbar: {
+    el: ".product-slider .swiper-scrollbar-drag",
+    draggable: true,
+    dragSize: slideWidth,
+  },
+  mousewheel: false,
+  allowTouchMove: true,
+});
 
 // scroll to next section
 function scrollnext() {
