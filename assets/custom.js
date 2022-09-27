@@ -45,15 +45,21 @@ $(".products-grid .product-elemet").each(function () {
     .append('<a class="product-btn" href="' + cartLink + '">Add to Cart</a>');
 });
 
-// Product Gallery Slider
-var slideWidth = $(".product-slider .swiper-slide").width();
+// Swiper API -- Main Slider
+var swiperGallery = new Swiper(".product-gallery .swiper-container", {
+  navigation: {
+    nextEl:
+      ".product-gallery.carousel .carousel-nav-next",
+    prevEl:
+      ".product-gallery.carousel .carousel-nav-prev",
+  },
+});
 
-// Swiper API
-var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .swiper-container", {
+// Swiper -- Thumbnail Slider
+var swiperThumb = new Swiper(".product-slider .swiper-container", {
   slidesPerView: "auto",
   spaceBetween: 10,
   direction: "horizontal",
-  // Navigation arrows
   navigation: {
     nextEl:
       ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
@@ -68,14 +74,6 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   allowTouchMove: true,
   slideToClickedSlide: true,
   loop: true,
-});
-
-var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  // defining
-});
-
-var swiperThumb = new Swiper(".product-slider .swiper-container", {
-  // defining
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
