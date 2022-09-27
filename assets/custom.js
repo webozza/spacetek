@@ -44,12 +44,6 @@ $('.collection-product-item').each(function() {
   });
 })();
 
-setTimeout(function() {
-  $('.spacetek-price-filter .ui-slider-horizontal').attr('style', 'height:5px');
-  $('.spacetek-price-filter .ui-slider-handle').attr('style', 'font-size:8px');
-}, 600);
-
-
 // Homepage Product Slider
 function triggerNextClick() {
   $(".carousel-navigation.carousel-nav-next").trigger("click");
