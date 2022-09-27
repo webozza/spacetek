@@ -89,7 +89,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
 
 $('.product-slider .swiper-slide').on('click', function() {
   var clickedIndex = swiperThumb.clickedIndex;
-  swiperGallery.slideToClosest(clickedIndex);
+  swiperGallery.slideTo(clickedIndex);
 });
 
 // When not enough slides 
