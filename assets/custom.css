@@ -316,6 +316,7 @@ background-color: #017EDA;
     margin-bottom: 40px;
 }
 .collection-page-title h2{color: #fff;}
+.collection-category-list li:nth-child(1){border-bottom:1px solid #00a5de;}
 .collection-category-list li>a{border: 0px solid #d0d0d0!important;color: #222222;}
 .conllections-list > li > a:hover, .collection-category-list > li > a:hover {
     color: #00a5de;
