@@ -334,10 +334,11 @@ background-color: #017EDA;
 .layout-sidebar-title h3 {
     text-transform: initial;
     color: #00a5de;
-    padding: 10px 10px 8px;
+    padding: 10px 20px 8px;
     border: 1px solid;
     border-radius: 30px;
-  text-align:center;
+    text-align:center;
+    width: fit-content;
 }
 .product-item-image {
     border-top-left-radius: 5px;
