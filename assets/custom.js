@@ -77,7 +77,7 @@ $('.product-slider .swiper-slide').on('click', function() {
 
   // Slide to Index
   setTimeout(function() {
-    var currentSlide = $('.product-gallery .swiper-slide-active').closest('.swiper-slide[data-swiper-slide-index="'+getIndex+'"]');
+    var currentSlide = $('.product-gallery .swiper-slide-active');
     console.log(currentSlide);
   }, 600);
   
