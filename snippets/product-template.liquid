@@ -117,7 +117,7 @@
                 <div class="flex-container flex-dir-column align-middle">
                   <div class="product-thumbnail-nav-prev" data-carousel-nav-prev><em class="sli sli-arrow-up"></em></div>
                   <div class="swiper-container" data-carousel-container>
-                    <div class="swiper-wrapper" style="flex-direction: column !important">
+                    <div class="swiper-wrapper">
                       {%- assign thumb_height = section.settings.image_height | times: 100 | divided_by: section.settings.image_width | round -%}
                       {%- assign thumb_size = '100x' | append: thumb_height -%}
                       {% for image in product.images %}
