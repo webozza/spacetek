@@ -75,6 +75,10 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
 //   var getIndex = $(this).attr('data-swiper-slide-index');
 // });
 
+swiper.on('slideChange', function () {
+  console.log('slide changed');
+});
+
 
 // scroll to next section
 function scrollnext() {
