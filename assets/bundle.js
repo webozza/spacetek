@@ -1483,6 +1483,8 @@ var _typeof =
             carousel: {
               container: "[data-carousel-container]",
               item: "[data-carousel-item]",
+              next: "[data-carousel-nav-next]",
+              prev: "[data-carousel-nav-prev]",
               pagination: "[data-carousel-pagination]",
             },
           }),
@@ -7314,9 +7316,9 @@ var _typeof =
               resize: function resize() {
                 this.params.lazy.enabled && this.lazy.load();
               },
-              scrollbarDragMove: function scrollbarDragMove() {
-                this.params.lazy.enabled && this.lazy.load();
-              },
+              //   scrollbarDragMove: function scrollbarDragMove() {
+              //     this.params.lazy.enabled && this.lazy.load();
+              //   },
               transitionStart: function transitionStart() {
                 this.params.lazy.enabled &&
                   (this.params.lazy.loadOnTransitionStart ||
