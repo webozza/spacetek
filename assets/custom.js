@@ -71,12 +71,16 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
 });
 
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  // eat shit nigga
+  // defining
+});
+
+var swiperThumb = new Swiper(".product-slider .swiper-container", {
+  // defining
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
   var getIndex = $(this).attr('data-swiper-slide-index');
-  console.log(swiper.activeIndex);
+  console.log(swiperThumb.activeIndex);
 });
 
 
