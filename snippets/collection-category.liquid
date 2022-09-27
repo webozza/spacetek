@@ -29,18 +29,11 @@
   <div class="layout-sidebar-title">
       <h3>Filter By Price</h3>
   </div>
-  <div class="range">
-    <div class="range__text-inputs">
-      <div class="range__wrapper">
-        <label class="range__label" for="price-min">From</label>
-        <input class="js-price-min range__input" name="price-min" id="price-min" type="number"/>
-      </div>
-      <div class="range__wrapper">
-        <label class="range__label" for="price-max">To</label>
-        <input class="js-price-max range__input" name="price-max" id="price-max" type="number"/>
-      </div>
-    </div>
-    <div class="js-price-range range__slider"></div>
+  <div class="price-range-slider">
+    <p class="range-value">
+      <input type="text" id="amount" readonly>
+    </p>
+    <div id="slider-range" class="range-bar"></div>
   </div>
 </div>
 
