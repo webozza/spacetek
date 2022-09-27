@@ -322,6 +322,7 @@ background-color: #017EDA;
     margin-bottom: 85px;
 }
 .collection-category-list li:nth-child(1){border-bottom:1px solid #00a5de;}
+.collection-category-list li:nth-child(1) a{font-weight:500;}
 .collection-category-list li>a{border: 0px solid #d0d0d0!important;color: #222222;}
 .conllections-list > li > a:hover, .collection-category-list > li > a:hover {
     color: #00a5de;
@@ -356,7 +357,7 @@ background-color: #017EDA;
 }
 .collection-category-list li>a, .collection-category-list li.is-accordion-submenu-item>a{
     text-transform: inherit;
-    font-weight: 500;
+    0.84375rem
     padding: 0.84375rem 1.25rem 0.4375rem !important;
 }
 /********************************** Collection Page End *******************************/
