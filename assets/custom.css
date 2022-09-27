@@ -358,7 +358,7 @@ background-color: #017EDA;
 .collection-category-list li>a, .collection-category-list li.is-accordion-submenu-item>a{
     text-transform: inherit;
     font-weight:400;
-    padding: 0.84375rem 1.25rem 0.4375rem !important;
+    padding: 0.84375rem 1.25rem 0.275rem !important;
 }
 /********************************** Collection Page End *******************************/
 
