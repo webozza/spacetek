@@ -891,10 +891,10 @@ padding: 1.375rem 1.6875rem !important;
 
 /*==================== CUSTOM PRICE RANGE SLIDER =========================*/
 /* Price Range Filter Slider*/
-#slider {
+.spacetek-price-filter #slider {
   margin: 50px;
 }
-.value {
+.spacetek-price-filter .value {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -911,33 +911,33 @@ padding: 1.375rem 1.6875rem !important;
   color: #333;
 }
 
-.price-range-both.value {
+.spacetek-price-filter .price-range-both.value {
   width: 100px;
   margin: 0 0 0 -50px;
   top: 26px;
 }
 
-.price-range-both {
+.spacetek-price-filter .price-range-both {
   display: none;
 }
 
-.value i {
+.spacetek-price-filter .value i {
   font-style: normal;
 }
 body div.ui-slider-range.ui-widget-header {
   background: #00a5de;
 }
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
+.spacetek-price-filter .ui-state-hover,
+.spacetek-price-filter .ui-widget-content .ui-state-hover,
+.spacetek-price-filter .ui-widget-header .ui-state-hover,
+.spacetek-price-filter .ui-state-focus,
+.spacetek-price-filter .ui-widget-content .ui-state-focus,
+.spacetek-price-filter .ui-widget-header .ui-state-focus {
   background: #2ecaf9 !important;
 }
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
+.spacetek-price-filter .ui-state-default,
+.spacetek-price-filter .ui-widget-content .ui-state-default,
+.spacetek-price-filter .ui-widget-header .ui-state-default {
   background: #00a5de !important;
   border-radius: 50%;
   font-size: 8px !important;
@@ -945,7 +945,7 @@ body div.ui-slider-range.ui-widget-header {
   outline: none !important;
   box-shadow: 0 0 7px rgb(0 0 0 / 20%);
 }
-span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
+.spacetek-price-filter span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
 }
 .spacetek-price-filter .range-value {
@@ -962,7 +962,10 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
     cursor: auto;
 }
 .spacetek-price-filter #slider-range .ui-slider-horizontal,
-.spacetek-price-filter #slider-range .ui-slider-range {
+.spacetek-price-filter #slider-range .ui-slider-range,
+.spacetek-price-filter #slider-range, .spacetek-price-filter #slider-range:focus .ui-slider-horizontal,
+.spacetek-price-filter #slider-range .ui-slider-range:focus,
+.spacetek-price-filter #slider-range:focus {
     height: 5px !important;
     background: #00a5de;
     outline: none;
