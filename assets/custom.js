@@ -63,7 +63,6 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   scrollbar: {
     el: ".product-slider .swiper-scrollbar-drag",
     draggable: true,
-    dragSize: slideWidth,
   },
   mousewheel: false,
   allowTouchMove: true,
