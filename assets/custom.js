@@ -16,6 +16,7 @@ $(function() {
 });
 $('#slider-range').on('slidechange', function() {
   var selectedPriceRange = $( "#amount" ).val();
+  console.log(ui.values[ 0 ]);
   console.log(selectedPriceRange);
 });
 

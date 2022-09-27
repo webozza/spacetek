@@ -450,8 +450,7 @@ li.tag-filters__item:nth-last-child(-n+1) a:after{
 }
 /*pop up*/
 .product-quick-view .product-add-cart {background: #FEBD19;}
-.product-info .product-sku {color:#666;}
-.product-info .product-sku span, .product-info .product-inventory span{color:#666;}
+.product-info .product-sku, .product-info .product-inventory {color:#666 !important;}
 
 /********************************** Collection Page End *******************************/
 
