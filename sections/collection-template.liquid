@@ -1,11 +1,12 @@
 <!-- /sections/collection-template.liquid -->
 {%- include 'amp-detector' -%}
+<h2>Collections Test</h2>
 {%- unless googleamp-%}
   {%- include 'collection-template' -%}
 {%- else -%}
   {%- include 'amp-collection-template' -%}
 {%- endunless -%}
-<h2>Collections Test</h2>
+
 {% schema %}
 {
   "name": "Collection page",
