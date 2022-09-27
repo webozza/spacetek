@@ -2,21 +2,21 @@ $ = jQuery;
 
 // Price Range Slider Filter
 $(function() {
-	$( ".spacetek-price-filter #slider-range" ).slider({
-	  range: true,
-	  min: 0,
-	  max: 2000,
-	  values: [ 0, 2000 ],
-	  slide: function( event, ui ) {
-		$( ".spacetek-price-filter #amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-	  }
-	});
-	$( ".spacetek-price-filter #amount" ).val( "$" + $( ".spacetek-price-filter #slider-range" ).slider( "values", 0 ) +
-	  " - $" + $( ".spacetek-price-filter #slider-range" ).slider( "values", 1 ) );
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 2000,
+    values: [ 0, 2000 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+    }
+  });
+  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
-$('.spacetek-price-filter #slider-range').on('slidechange', function() {
-    var selectedPriceRange = $( ".spacetek-price-filter #amount" ).val();
-    console.log(selectedPriceRange);
+$('#slider-range').on('slidechange', function() {
+  var selectedPriceRange = $( "#amount" ).val();
+  console.log(selectedPriceRange);
 });
 
 // Homepage Product Slider
