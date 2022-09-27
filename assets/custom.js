@@ -71,14 +71,14 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
   loop: true,
   on: {
     slideChange: function () {
-      console.log('slide changed');
+      swiper.activeIndex();
     },
   }
 });
 
-// $('.product-slider .swiper-slide').on('click', function() {
-//   var getIndex = $(this).attr('data-swiper-slide-index');
-// });
+$('.product-slider .swiper-slide').on('click', function() {
+  var getIndex = $(this).attr('data-swiper-slide-index');
+});
 
 
 // scroll to next section
