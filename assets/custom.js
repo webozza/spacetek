@@ -14,12 +14,22 @@ $(function() {
   $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     " — $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
+
+// Creates custom data attribute for price range
+$('.collection-product-item').each(function() {
+    var priceProduct = $(this);
+    var str = priceProduct.find('span:first-child').text();
+    var newstr = str.substr(1,str.length);
+    $(this).closest('.collection-product-item').attr('data-price-range', newstr);
+});
+
 (function() {
   $('#slider-range').on('slidechange', function() {
     var selectedPriceMin = $("#slider-range").slider( "values", 0);
     var selectedPriceMax = $( "#slider-range" ).slider( "values", 1)
     console.log(selectedPriceMin, 'selected price min');
     console.log(selectedPriceMax, 'selected price max');
+    $('.collection-product-item:not([data-price-range="'+selectedPriceMax+'"])').hide('slow');
   });
 })();
 
