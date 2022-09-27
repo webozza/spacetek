@@ -47,12 +47,14 @@ $(".products-grid .product-elemet").each(function () {
 
 // Swiper API -- Main Slider
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
+  slidesPerView: 1,
   navigation: {
     nextEl:
-      ".product-gallery.carousel .carousel-nav-next",
+      ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
     prevEl:
-      ".product-gallery.carousel .carousel-nav-prev",
+      ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
   },
+  loop: true,
 });
 
 // Swiper -- Thumbnail Slider
