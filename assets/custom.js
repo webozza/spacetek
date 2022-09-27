@@ -96,7 +96,7 @@ $('.product-slider .swiper-slide').on('click', function() {
 var totalSlides = $('.product-slider .swiper-slide').length;
 if(totalSlides <= 3) {
   $('.product-slider').hide();
-  $('.product-gallery .swiper-slide:not(:first-child)').hide();
+  $('.product-gallery .swiper-slide:not(:first-child), .product-gallery.carousel .carousel-nav-next, .product-gallery.carousel .carousel-nav-prev').hide();
 }
 
 
