@@ -3,12 +3,12 @@
   {%- assign slideshow_size = section.settings.slideshow_width | append: 'x' | append: section.settings.slideshow_height -%}
   {%- if section.blocks.size > 0 -%}
     <div class="swiper-container" data-slideshow-container >
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" >
         {%- for block in section.blocks -%}
           {%- if block.type == 'image' -%}
             <div class="swiper-slide" data-slideshow-slide-type="image" data-slideshow-slide >
               {%- if block.settings.link != blank and block.settings.action == blank -%}
-                <a class="index-slideshow-link" href="{{ block.settings.link }}"></a>
+                <a class="index-slideshow-link" href="{{ block.settings.link }}" ></a>
               {%- endif -%}
               <div class="index-slideshow-background">
                 {%- if forloop.first == true -%}
