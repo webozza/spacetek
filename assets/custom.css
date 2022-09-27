@@ -59,6 +59,20 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
 }
 
+.spacetek-price-filter .range-value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.spacetek-price-filter .range-value input[readonly] {
+    background: transparent;
+    border: none;
+    font-size: 0.875rem;
+    color: #333;
+    margin: 0;
+}
+
 /*fonts & style*/
 .custom-content .section-heading2, .custom-content .section-heading, .box-title, .product-item-title, .product-item-price, .bg-content .heading, h1, h2, h3, h4, h5, h6, p {font-family: 'Poppins',sans-serif !important;}
 .custom-content .section-heading2, .custom-content .section-heading, .box-title, .video-title, .bg-content .heading, .custom-content-image .section-heading{
