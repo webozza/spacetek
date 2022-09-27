@@ -158,12 +158,11 @@ $("body.template-index .product-item").each(function () {
 $(window).resize(function () {
   var windowWidth = $(this).width();
   resizeCustomContentHeight();
+  productDimensions();
 
   if (windowWidth > 1400) {
     customSlider();
     setSliderControlsHeight();
-  } else if (windowWidth > 1024) {
-    productDimensions();
   }
   
 });
