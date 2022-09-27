@@ -33,12 +33,12 @@ $('.collection-product-item').each(function() {
     // Initiate the Filter
     $('.collection-product-item[data-price-range]').filter(function() {
       return $(this).data('price-range') > selectedPriceMax || $(this).data('price-range') < selectedPriceMin
-    }).hide();
+    }).fadeOut('fast');
     
     setTimeout(function() {
       $('.collection-product-item[data-price-range]').filter(function() {
         return $(this).data('price-range') <= selectedPriceMax && $(this).data('price-range') >= selectedPriceMin
-      }).show();
+      }).fadeIn('slow');
     }, 600);
     
   });
