@@ -64,6 +64,9 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
   allowTouchMove: true,
   slideToClickedSlide: true,
   loop: true,
+  zoom: {
+    maxRatio: 5,
+  }
 });
 
 // Swiper -- Thumbnail Slider
