@@ -72,7 +72,13 @@ var swiper = new Swiper(".product-slider .swiper-container", {
 });
 
 var swiperGallery = new Swiper(".product-gallery .swiper-container", {
-  loop: true
+  loop: true,
+  navigation: {
+    nextEl:
+      ".product-thumbnail-nav-next, .product-gallery.carousel .carousel-nav-next",
+    prevEl:
+      ".product-thumbnail-nav-prev, .product-gallery.carousel .carousel-nav-prev",
+  }
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
