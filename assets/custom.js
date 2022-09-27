@@ -71,7 +71,8 @@ var swiper = new Swiper(".product-slider .swiper-container, .product-gallery .sw
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
-  swiper.slideTo(1);
+    var getIndex = $(this).attr('data-swiper-slide-index');
+    console.log(getIndex);
 });
 
 
