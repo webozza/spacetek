@@ -70,7 +70,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
   },
   scrollbar: {
     el: ".product-slider .swiper-scrollbar-drag",
-    draggable: true,
+    draggable: false,
   },
   mousewheel: false,
   allowTouchMove: true,
