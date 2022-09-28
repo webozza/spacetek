@@ -724,6 +724,7 @@ padding: 1.375rem 1.6875rem !important;
 }
 }
 @media screen and (max-width: 800px){
+  .mobile-logo img { max-height: 45px;}
   .index-slideshow-caption-action {
     left: 70%!important;
     top: 65%!important;
