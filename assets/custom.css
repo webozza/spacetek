@@ -495,11 +495,11 @@ em.sli.sli-arrow-plus:before, .sli-arrow-plus:before{
 em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     content: "\2212";
 }
-.product-quantity .input-group-label {
+.product-quantity .input-group-label.bot {
     border-right: 1px solid #02a4e55c;
     padding-right: 5px;
 }
-.product-quantity .input-group-label {
+.product-quantity .input-group-label.top {
     padding-left: 5px;
     border-left: 1px solid #02a4e55c;
 }
