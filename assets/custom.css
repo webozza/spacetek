@@ -528,6 +528,7 @@ em.sli.sli-arrow-plus:before, .sli-arrow-plus:before{
 em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     content: "\2212";
 }
+.product-sizechart{display:none;}
 /*
 .product-quantity .input-group-label.bot {
     border-right: 1px solid #02a4e55c;
@@ -558,7 +559,6 @@ padding: 1.375rem 1.6875rem !important;
     font-weight: 500 !important;
     text-transform: inherit !important;
 }
-
 .accordion-title::before {display:none;}
 .product-buy{
     background: transparent;
@@ -567,7 +567,6 @@ padding: 1.375rem 1.6875rem !important;
     border-radius: 0%;
     box-shadow: 0 0px 0px rgb(50 52 54 / 30%);
 }
-
 .product-option-value select{
   color: #333;
 }
