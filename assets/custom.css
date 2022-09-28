@@ -440,7 +440,7 @@ li.tag-filters__item:nth-last-child():after{
     border: 2px solid #ffffff;
 }
 .product-add-cart{
-  background: #FEBD19;
+  background: #FEBD19 !important;
     border-radius: 3px;
     box-shadow: 0 4px #ff821a;
 }
