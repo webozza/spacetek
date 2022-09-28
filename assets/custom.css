@@ -62,7 +62,7 @@ float:left;
 width:24%;
 float:right;
 }
-a:hover, a:focus, a:active, a.active {
+.custom-content a:hover, .custom-contenta:focus, .custom-content a:active, .custom-content a.active {
     color: #02a4e5 !important;
 }
 /*custom image*/
