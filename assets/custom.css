@@ -380,6 +380,14 @@ li.tag-filters__item:nth-last-child():after{
 .product-quick-view-close {
     background: #febd19;
 }
+.input-group-label em.sli.sli-arrow-minus {
+    padding-right: 5px;
+    border-right: 1px solid;
+}
+.input-group-label em.sli.sli-arrow-plus {
+    padding-left: 5px;
+    border-left: 1px solid #02a4e5;
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
