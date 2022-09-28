@@ -8,7 +8,7 @@
 /********************************** Home Page Start *******************************/
 /*header*/
 .header-menu-root:hover > a, .header-menu-root.active > a {color: #00a5de;}
-.search-box-container .button.clear:hover {
+.search-box-container .button.clear:hover, .mini-cart-total{
     color: #02a4e5;
 }
 /*slider*/
