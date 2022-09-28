@@ -219,7 +219,7 @@
       "theme-menu-mobile": {
         "type": "theme-menu-mobile",
         "settings": {
-          "link_list": "",
+          "link_list": "main-menu",
           "email": "Contact@Marco.com",
           "phone": "(+10)1900.123.678"
         }
