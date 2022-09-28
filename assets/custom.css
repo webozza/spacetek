@@ -622,6 +622,7 @@ padding: 1.375rem 1.6875rem !important;
     text-align:center;
 }
   ul.recommend-product li p{font-size:1.3rem;line-height: 1.6rem;}
+  ul.recommend-product li p:hover{color:#02a4e5;}
   ul.recommend-product li img{width:100%;margin-bottom: 10px;border-radius: 8px;}
 
 /****************************** Product Recommendation End **************************/
