@@ -62,7 +62,7 @@ float:left;
 width:24%;
 float:right;
 }
-.custom-content a:hover, .custom-contenta:focus, .custom-content a:active, .custom-content a.active {
+a:hover, a:focus, a:active, a.active {
     color: #02a4e5 !important;
 }
 /*custom image*/
@@ -229,7 +229,7 @@ background-color: #017EDA;
   text-transform:uppercase;
   font-size: 14px;
 }
-.product-item-button a:hover{color:#fff;}
+.product-item-button a:hover{color:#fff !important;}
 .product-rating-color{display:none;}
 .custom-content .grid-container > div:nth-child(4) > div,
 .custom-content .grid-container > div:nth-child(1) > div {
