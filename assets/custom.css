@@ -328,6 +328,9 @@ background-color: #017EDA;
 .newsletter-popup.reveal {
     border-radius: 10px;
 }
+.button-to-top:hover {
+    background: #02a4e6;
+}
 /********************************** Home Page End *******************************/
 
 /********************************** Collection Page End *******************************/
