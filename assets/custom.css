@@ -832,6 +832,11 @@ padding: 1.375rem 1.6875rem !important;
 }
   
 }
+@media only screen and (max-width: 550px){
+  .products-grid .product-item-caption {margin-bottom: 15px;}
+  .product-grid .product-btn {padding: 7px 25px;}
+  
+}
 
 @media screen and (min-width: 34.4375em) and (max-width: 50.06125em){
 .index-slideshow-container {
