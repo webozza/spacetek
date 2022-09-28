@@ -17,6 +17,10 @@
 .index-slideshow-navigation:hover {
     background: #00a5de !important;
 }
+.index-slideshow-caption-action.light a:hover {
+    background: #02a4e5;
+    border-color: #02a4e5;
+}
 /*custom content*/
 .custom-content {
 background: url('https://cdn.shopify.com/s/files/1/0610/5458/3019/files/bg1.png?v=1662239720');
