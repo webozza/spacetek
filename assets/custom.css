@@ -503,6 +503,7 @@ em.sli.sli-arrow-plus:before, .sli-arrow-plus:before{
 em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     content: "\2212";
 }
+/*
 .product-quantity .input-group-label.bot {
     border-right: 1px solid #02a4e55c;
     padding-right: 5px;
@@ -511,6 +512,8 @@ em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     padding-left: 5px;
     border-left: 1px solid #02a4e55c;
 }
+*/
+
 .product-submit{margin-bottom: 1.875rem;}
 .product-add-cart:hover, .product-add-cart:focus, .product-add-cart:active {
     background: #FEBD19;
