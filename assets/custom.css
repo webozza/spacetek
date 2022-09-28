@@ -62,6 +62,9 @@ float:left;
 width:24%;
 float:right;
 }
+button.view-btn2 a:hover, button.view-btn a:hover{
+    color: #017eda !important;
+}
 /*custom image*/
 .custom-image{padding:30px 0px;}
 
