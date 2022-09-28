@@ -377,6 +377,9 @@ li.tag-filters__item:nth-last-child():after{
 }
 .reveal {border: 0px solid #cacaca;}
 .product-quick-view ul li{color:#fff;}
+.product-quick-view-close {
+    background: #febd19;
+}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
@@ -492,11 +495,11 @@ em.sli.sli-arrow-plus:before, .sli-arrow-plus:before{
 em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     content: "\2212";
 }
-.product-quantity .input-group-label.bot {
+.product-quantity .input-group-label {
     border-right: 1px solid #02a4e55c;
     padding-right: 5px;
 }
-.product-quantity .input-group-label.top {
+.product-quantity .input-group-label {
     padding-left: 5px;
     border-left: 1px solid #02a4e55c;
 }
