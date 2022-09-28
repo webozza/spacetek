@@ -8,6 +8,9 @@
 /********************************** Home Page Start *******************************/
 /*header*/
 .header-menu-root:hover > a, .header-menu-root.active > a {color: #00a5de;}
+.search-box-container .button.clear:hover {
+    color: #02a4e5;
+}
 /*slider*/
 .index-slideshow{margin-bottom: 0 !important;}
 .index-slideshow-navigation:hover {
