@@ -372,9 +372,11 @@ li.tag-filters__item:after {
 li.tag-filters__item:nth-last-child():after{
     content: '';
 }
-
-
-
+.product-quick-view .product {
+    background: #00a5de !important;
+}
+.reveal {border: 0px solid #cacaca;}
+.product-quick-view ul li{color:#fff;}
 /********************************** Collection Page End *******************************/
 
 /************************ Contact Starlink Page Start ************************************/
