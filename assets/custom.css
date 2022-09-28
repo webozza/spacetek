@@ -10,6 +10,9 @@
 .header-menu-root:hover > a, .header-menu-root.active > a {color: #00a5de;}
 /*slider*/
 .index-slideshow{margin-bottom: 0 !important;}
+.index-slideshow-navigation:hover {
+    background: #00a5de !important;
+}
 /*custom content*/
 .custom-content {
 background: url('https://cdn.shopify.com/s/files/1/0610/5458/3019/files/bg1.png?v=1662239720');
