@@ -306,6 +306,11 @@ background-color: #017EDA;
     width: calc(100% - 150px);
     padding: 5px;
 }
+
+/*home page pop up*/
+.newsletter-popup.reveal {
+    border-radius: 10px;
+}
 /********************************** Home Page End *******************************/
 
 /********************************** Collection Page End *******************************/
