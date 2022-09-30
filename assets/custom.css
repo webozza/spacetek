@@ -211,8 +211,6 @@ background-color: #017EDA;
 .footer-address{margin-bottom: 5px;}
 .footer .footer-linklist-1 a:hover {color: #00a5de;}
 
-
-
 /*****css by rony*****/
 
 .product-item-title a {
@@ -544,6 +542,10 @@ em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
 .product-add-cart:hover, .product-add-cart:focus, .product-add-cart:active {
     background: #FEBD19;
     cursor: pointer;
+}
+/*promotion offer*/
+.product-custombox {
+    display: none;
 }
 /**** swip slider *******/
 .product-thumbnail .flex-dir-column {flex-direction: row;}
