@@ -544,9 +544,8 @@ em.sli.sli-arrow-minus:before, .sli-arrow-minus:before{
     cursor: pointer;
 }
 /*promotion offer*/
-.product-custombox {
-    display: none;
-}
+.product-rating{display: none;}
+.product-custombox {display: none;}
 /**** swip slider *******/
 .product-thumbnail .flex-dir-column {flex-direction: row;}
 .swiper-slide {width: auto;}
