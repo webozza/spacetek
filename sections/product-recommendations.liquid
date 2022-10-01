@@ -64,14 +64,4 @@ document.addEventListener("shopify:section:load", function(event) {
 });
 // Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
-
-  (function removeOneProduct() {
-    $ = jQuery;
-    $('.recommend-product .product').each(function() {
-      var productTitle = $(this).find('.product__title').text();
-      if(productTitle == 'Shipping Protection') {
-          $(this).remove();
-      }
-    });
-  })();
 {% endjavascript %}
