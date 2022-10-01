@@ -327,11 +327,14 @@
     }
   })();
 
-  $('.collection-product-item').each(function() {
-    var itemHref = $(this).find('a').attr('href');
-    if(itemHref == 'https://spacetek.com.au/products/shipping-protection') {
-        $(this).remove();
-    }
-  });
+  (function removeAddon() => {
+    $ = jQuery;
+    $('.collection-product-item').each(function() {
+      var itemHref = $(this).find('a').attr('href');
+      if(itemHref == 'https://spacetek.com.au/products/shipping-protection') {
+          $(this).remove();
+      }
+    });
+  })();
   </script>
 {%- endif -%}
