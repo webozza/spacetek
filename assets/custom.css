@@ -571,7 +571,7 @@ padding: 1.375rem 1.6875rem !important;
 .product-option-value select{
   color: #333;
 }
-#proddetailsprodname{color:#333;}
+#proddetailsprodname, #proddetailsprodname em{color:#333;}
 /****************************** Product Single Page End **************************/
 
 /****************************** Cart Page Start **************************/
