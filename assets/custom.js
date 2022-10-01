@@ -216,10 +216,15 @@ $(window).resize(function () {
 setTimeout(() => $(window).trigger("resize"), 600);
 
 // Remove Selected Products
-$('.recommend-product .product').each(function() {
-  var productTitle = $(this).find('.product__title').text();
-  console.log(productTitle)
-  if(productTitle == 'Shipping Protection') {
-      $(this).hide();
-  }
-});
+function removeProducts() {
+  $('.recommend-product .product').each(function() {
+    var productTitle = $(this).find('.product__title').text();
+    console.log(productTitle)
+    if(productTitle == 'Shipping Protection') {
+        $(this).hide();
+    }
+  });
+}
+setTimeout(() => {
+  removeProducts();
+}, 600);
