@@ -64,4 +64,14 @@ document.addEventListener("shopify:section:load", function(event) {
 });
 // Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
+
+  (function removeAddon() {
+    $ = jQuery;
+    $('.recommend-product .product').each(function() {
+      var productHref = $(this).find('a').attr('href');
+      if(productHref == 'https://spacetek.com.au/products/shipping-protection') {
+          $(this).remove();
+      }
+    });
+  })();
 {% endjavascript %}
