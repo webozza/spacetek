@@ -216,11 +216,9 @@ $(window).resize(function () {
 setTimeout(() => $(window).trigger("resize"), 600);
 
 // Remove Selected Products
-(function removeOneProduct() {
-  $('.recommend-product .product').each(function() {
-    var productTitle = $(this).find('.product__title').text();
-    if(productTitle == 'Shipping Protection') {
-        $(this).hide();
-    }
-  });
-})();
+$('.recommend-product .product').each(function() {
+  var productTitle = $(this).find('.product__title').text();
+  if(productTitle == 'Shipping Protection') {
+      $(this).hide();
+  }
+});
