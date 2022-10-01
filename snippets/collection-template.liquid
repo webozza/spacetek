@@ -327,7 +327,7 @@
     }
   })();
 
-  (() removeAddon() {
+  (function removeAddon() {
     $ = jQuery;
     $('.collection-product-item').each(function() {
       var itemHref = $(this).find('a').attr('href');
