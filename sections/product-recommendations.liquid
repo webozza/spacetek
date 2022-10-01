@@ -65,11 +65,11 @@ document.addEventListener("shopify:section:load", function(event) {
 // Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
 
-  (function removeAddon() {
+  (function removeOneProduct() {
     $ = jQuery;
     $('.recommend-product .product').each(function() {
-      var productHref = $(this).find('a').attr('href');
-      if(productHref == 'https://spacetek.com.au/products/shipping-protection') {
+      var productTitle = $(this).find('.product__title').text();
+      if(productTitle == 'Shipping Protection') {
           $(this).remove();
       }
     });
