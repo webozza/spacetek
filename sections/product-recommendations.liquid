@@ -19,6 +19,18 @@
 </div>
 </div>
 
+<script>
+  (function removeOneProduct() {
+    $ = jQuery;
+    $('.recommend-product .product').each(function() {
+      var productTitle = $(this).find('.product__title').text();
+      if(productTitle == 'Shipping Protection') {
+          $(this).hide();
+      }
+    });
+  })();
+</script>
+
 {% schema %}
   {
     "name": "Section name",
