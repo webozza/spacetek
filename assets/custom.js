@@ -115,7 +115,7 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
 var swiperThumb = new Swiper(".product-slider .swiper-container", {
   slidesPerView: 4,
   spaceBetween: 10,
-  loopedSlides: 2,
+  loopedSlides: 3,
   direction: "horizontal",
   navigation: {
     nextEl:
