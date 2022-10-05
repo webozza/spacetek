@@ -113,9 +113,8 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
 
 // Swiper -- Thumbnail Slider
 var swiperThumb = new Swiper(".product-slider .swiper-container", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 10,
-  loopedSlides: 3,
   direction: "horizontal",
   navigation: {
     nextEl:
@@ -130,7 +129,25 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
   mousewheel: false,
   allowTouchMove: true,
   slideToClickedSlide: true,
-  loop: true,  
+  loop: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+  }
+  
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
