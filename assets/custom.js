@@ -146,6 +146,11 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
       slidesPerView: 4,
       spaceBetween: 30
     }
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    }
   }
   
 });
