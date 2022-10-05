@@ -145,7 +145,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
     640: {
       slidesPerView: 4,
       spaceBetween: 30
-    }
+    },
     // when window width is >= 768px
     768: {
       slidesPerView: 5,
