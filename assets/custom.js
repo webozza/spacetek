@@ -113,7 +113,7 @@ var swiperGallery = new Swiper(".product-gallery .swiper-container", {
 
 // Swiper -- Thumbnail Slider
 var swiperThumb = new Swiper(".product-slider .swiper-container", {
-  slidesPerView: "auto",
+  slidesPerView: 3,
   spaceBetween: 10,
   direction: "horizontal",
   navigation: {
@@ -129,7 +129,7 @@ var swiperThumb = new Swiper(".product-slider .swiper-container", {
   mousewheel: false,
   allowTouchMove: true,
   slideToClickedSlide: true,
-  loop: true  
+  loop: true,  
 });
 
 $('.product-slider .swiper-slide').on('click', function() {
